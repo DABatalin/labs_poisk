@@ -1,0 +1,23 @@
+db:
+  host: "localhost"
+  port: 27017
+  name: "search_engine_db"
+  collection: "raw_docs"
+
+logic:
+  # Путь к файлу, где робот будет запоминать, на какой статье остановился
+  state_file: "crawler_state.json"
+
+sources:
+  habr:
+    base_url: "https://habr.com/ru/articles/{}/"
+    start_id: 700000 
+    end_id: 800000
+    delay: 1.0
+    step: 2  
+  opennet:
+    base_url: "https://www.opennet.ru/opennews/art.shtml?num={}"
+    start_id: 45000 
+    end_id: 64425
+    delay: 4.0
+    step: 1

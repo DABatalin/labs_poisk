@@ -1,0 +1,1450 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=koi8-r">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="icon" type="image/png" href="/favicon.png">
+<link href="/opennet_120.png" rel="apple-touch-icon">
+<link href="/opennet_180.png" rel="apple-touch-icon" sizes="180x180">
+<link rel="icon" type="image/png" href="/opennet_128.png" sizes="128x128">
+<link rel="icon" type="image/png" href="/opennet_192tg.png" sizes="192x192">
+<meta property="_og:image" content="https://www.opennet.ru/opennet_192tg.png">
+
+<link rel="alternate" type="application/rss+xml" href="/opennews/opennews_all_utf.rss" title="Все в одном: главные + мини-новости">
+<link rel="alternate" type="application/rss+xml" href="/opennews/opennews_full.rss" title="Полные тексты всех новостей">
+<link rel="alternate" type="application/rss+xml" href="/opennews/opennews_6.rss" title="OpenNews RSS: главные новости">
+<link rel="alternate" type="application/rss+xml" href="/opennews/opennews_mini.rss" title="Mini-News RSS: мини-новости">
+<title>iLeakage - метод эксплуатации уязвимости в CPU Apple через браузеры на базе движка WebKit</title>
+<script language="JavaScript">
+var topnews=[
+
+];
+</script>
+
+
+<script language="JavaScript">
+    
+  var raw_nowtime=1766774801;
+</script>
+<script language="JavaScript" src="/getname20.js"></script>
+<script language="JavaScript" src="/autoedit.js"></script>
+</head>
+<body bgcolor="#E3E4D0" text="#000000" link="#0000FF" vlink="#000080" alink="#FF00FF"  onLoad="set_lastload('/');">
+<!-- заголовок. начало -->
+<LINK REL="stylesheet" href="/opennet4a.css" type="text/css">
+<!--htdig_noindex-->
+<FORM method="get" action="https://www.opennet.ru/search.shtml">
+<aside>
+<div style="width: 100%; text-align: right; font-size: 70%; background: #E9EAD6; margin-bottom:-10px;">
+Профиль: <b><a href="/~" rel="nofollow" title="/~ - сводная страница участника"><u>Аноним</u></a></b> (<a href="https://www.opennet.ru/cgi-bin/openforum/vsluhboard.cgi?az=login">вход</a> | <a href="https://www.opennet.ru/cgi-bin/openforum/vsluhboard.cgi?az=user_register">регистрация</a>)
+
+</div>
+
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+<TR>
+<TD width=300 VALIGN="BOTTOM" BGCOLOR="#E9EAD6" style="background: #E9EAD6 url('/back.gif') repeat-x bottom left">
+<A HREF="/"><IMG SRC="/opennet2.gif" HEIGHT=60 WIDTH=249 ALT="The OpenNET Project" BORDER="0"></A><br>
+</TD>
+<TD WIDTH=100 ALIGN=CENTER BGCOLOR="#E9EAD6" style="background: #E9EAD6 url('/back.gif') repeat-x bottom left">
+
+</TD><TD WIDTH=50% ALIGN=CENTER BGCOLOR="#E9EAD6" style="background: #E9EAD6 url('/back.gif') repeat-x bottom left;padding-bottom:10px;">
+<table width="100%" border=0>
+<tr>
+<td width="22%">
+ <A HREF="../opennews/" class="h"><b>НОВОСТИ</b></A> (<a href="../news/opennet.shtml" class="h">+</a>)
+</td><td width="18%%">
+  <A HREF="../mp/" class="h"><b>КОНТЕНТ</b></A>
+</td><td width="14%">
+  <A HREF="http://wiki.opennet.ru" class="h"><b>WIKI</b></A>
+</td><td width="14%">
+   <A HREF="../man.shtml" class="h"><b>MAN'ы</b></A>
+</td><td width="16%">
+   <A HREF="../forum/" class="h"><b>ФОРУМ</b></A>
+</td><td width="16%">
+<A HREF="../search.shtml" class="h" onMouseOver="document.getElementById('form12').style.display='block';">Поиск</A>&nbsp;(<A HREF="../keywords/" class="h">теги</A>)
+<INPUT id="form12" style="display: none;" type="text" size="10" name="words" value="" title='для поиска в google наберите "g фраза"'>
+</td></tr>
+</table>
+
+</TD><TD align=right WIDTH=20% BGCOLOR="#E9EAD6" style="background: #E9EAD6 url('/back.gif') repeat-x bottom left;padding-bottom:5px;">
+
+<a href="https://www.opennet.ru/opennews/opennews_all_utf.rss"><img src="/img/rss.png" height="16" width="16" alt="RSS" title="RSS" border="0"></a>&nbsp;<a href="https://twitter.com/opennetru"><img src="/twitter.png" height="16" width="16" alt="twitter" title="Twitter" border="0"></a>&nbsp;<a href="https://vk.com/opennet"><img src="/img/vkontakte.gif" height="16" width="16" title="ВКонтакте" border="0"></a>&nbsp;<a href="https://zen.yandex.ru/opennet"><img src="/img/zen.png" height="16" width="16" title="Yandex Zen" border="0"></a><!--&nbsp;<a href="https://www.facebook.com/OpenNet.News/"><img src="/img/facebook.gif" height="16" width="16" title="Facebook" border="0"></a>-->&nbsp;<a href="https://telegram.space/opennet_ru"><img src="/img/telegram2.png" height="16" width="16" title="Telegram" border="0"></a>
+</TABLE>
+</aside>
+
+<style>
+    .hdr_mobile {
+	text-align: center; 
+	display: none;
+	margin: 0px;
+	padding: 0px;
+    }
+</style>
+<div class=hdr_mobile>
+<div style="margin-left: auto; margin-right: auto; width: 100%; height: 70px; border:1px solid #b0b190; min-width: 360px; max-width: 600px; background: #E9EAD6 url('/back.gif') repeat-x bottom left;">
+<div style="float:left; width: 249px; height: 60px; margin-top: 10px;">
+<A HREF="/"><IMG SRC="/opennet2_lite.gif" style="height: 60px; width: 249px; border: 1px;" ALT="The OpenNET Project / Index page"></A>
+</div>
+<div style="float: left; text-align: center; height: 70px; width: 331px; padding: 5px; margin-left: 10px;">
+<br><small>[ <a href="/opennews/">новости</a>&nbsp;/<a href="/opennews/?full_lines=15&amp;lines=15&amp;mid_lines=00">+++</a> | <a href="/forum/">форум</a> | <a href="/keywords/">теги</a>
+| <a href="tg://resolve?domain=opennet_ru"><img src="/img/telegram2.png" height="16" width="16" title="Telegram" border="0" style="margin-bottom: -4px;"></a>
+]</small>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+
+<div style="float: left; width: 279; text-align: left;padding-right: 60px;" id=adv>
+</div>
+<div style="padding-top: 0px;position:absolute;left:50%;margin-left:-235px;width:470px;" id=adv2>
+</div>
+<div style="width: 279;float: right;" id=adv3>
+</div>
+<div style="clear: both;"></div>
+<br>
+</FORM>
+<!--/htdig_noindex-->
+
+
+<!-- заголовок. конец -->
+<link rel="STYLESHEET" type="text/css" href="style17.css">
+<a name="toptop"></a>
+<div class=m_col id=as2>
+
+
+
+    <!-- сводные новости. начало -->
+    <form action="/cgi-bin/openforum/ch_cat.cgi" method="POST"><table class="thdr2">
+<tr><td><h2><a href="https://opennet.ru/60000-apple" class="nolink" onClick="return false;"><span id="r_title">
+iLeakage - метод эксплуатации уязвимости в CPU Apple через браузеры на базе движка WebKit
+</span></a></h2>
+<span style="font-size: 10pt;">27.10.2023&nbsp;12:01</span>
+</td></tr>
+</table>
+
+<table class="ttxt2">
+<tr><td class=chtext bgcolor="E9EAD6" id="r_memo" style="padding-top: 15px;">
+<p>Исследователи из Технологического института Джорджии, Мичиганского университета и Рурского университета <a href="https://ileakage.com/files/ileakage.pdf">разработали</a> технику атаки <a href="https://ileakage.com/">iLeakage</a>, позволяющую эксплуатировать  уязвимость в ARM-процессорах Apple серий "A" и "M" через открытие в браузере специально оформленной страницы. Подготовленные исследователями прототипы эксплоитов позволяют при запуске JavaScript-кода в браузере узнать содержимое сайтов, открытых в других вкладках, например, продемонстрирована возможность <a href="https://www.youtube.com/watch?v=2uH9slLKTjw">определения</a> текста письма, открытого во вкладке с Gmail, <a href="https://www.youtube.com/watch?v=sNdyrCtajP4">просмотра</a> истории  YouTube и <a href="https://www.youtube.com/watch?v=Z2RtpN77H8o">извлечения</a> пароля, подставленного менеджером паролей LastPass в форму входа в Instagram. Атака применима к браузеру Safari на системах с macOS и любым браузерам на платформе iOS (правила Apple предписывают во всех браузерах для iOS использовать только системный движок WebKit, общий с Safari).
+
+
+<p>Несмотря на то, что атака применима только к продуктам Apple, в ней предложен достаточно интересный способ обхода ограничений разрешения таймера в движке WebKit, который потенциально может оказаться полезным для обхода аналогичных ограничений в  других браузерах. Выявленная в чипах Apple M1 и M2 уязвимость напоминает классическую уязвимость Spectre v1 и также приводит к утечке содержимого памяти при выполнении операций в спекулятивном режиме, которые в случае неверного предсказания отбрасываются процессором, но следы их выполнения оседают в процессорном кэше. 
+
+
+<p>В  рассматриваемом методе атаки спекулятивное выполнение позволило создать примитив для чтения произвольных 64-разрядных указателей в адресном пространстве процесса, отвечающего за отрисовку содержимого страниц в браузере. Для получения доступа к адресному пространству процесса, в котором отрисовывается чужой сайт, использован трюк с открытием исследуемой чужой страницы во всплывающем окне при помощи JavaScript-метода window.open(). В этом случае сайт открывался не в отдельном процессе, а в одном процессе с кодом атакующего. 
+
+
+<p>В качестве одной из мер защиты в движке WebKit допускается работа JavaScript только с упакованными 35-разрядными указателями. Для организации доступа к всему адресному пространству процесса и обхода 35-разрядного ограничения исследователи задействовали технику Type Confusion, позволяющую вынудить JavaScript-движок обработать объект с некорректным типом. При обработке специально оформленного  JavaScript-объекта в движке создаются условия, приводящие к спекулятивному исполнению инструкций, осуществляющих доступ к массиву. 
+
+
+<p>Так как тип объекта не соответствует типу обрабатываемого массива, в обычных условиях подобные действия блокируются, поэтому  код для атаки Type Confusion выносится в условный блок "if", который не активируется при обычных условиях, но выполняется в спекулятивном режиме при неверном предсказании процессором дальнейшего ветвления.
+В итоге процессор спекулятивно обращается к сформированному 64-разрядному указателю, но  откатывает состояние после определения неудачного прогноза. При этом следы спекулятивного выполнения оседают в общем кэше и могут быть восстановлены при помощи методов определения содержимого кэша по сторонним каналам. 
+
+
+<p>Для извлечения данных из L1-кэша CPU, оставшихся после спекулятивного выполнения операций, в атаке задействована модификация <a href="https://www.opennet.ru/opennews/art.shtml?num=54751">ранее предложенного</a> Google метода pLRU (pseudo Least
+Recently Used). При этом исходный метод pLRU завязан на измерении задержек при доступе к данным, различие которых даёт возможность судить о том, находится или нет определённая последовательность в процессорном кэше (если данные прокешированы - операция выполняется быстрее, а если нет - медленнее). Для защиты от зондирования процессорного кэша в современных браузерах точность работы таймера существенно понижена до уровня, не позволяющего выявлять различия.
+
+<p>Для преодоления ограничения точности таймера в атаке iLeakage предложена техника, позволяющая определять присутствие или отсутствие данных в кэше, используя состояние гонки. Суть метода в одновременном  запуске двух потоков - основного и эталонного. Эталонный поток включает последовательность инструкций, выполняемых определённое эталонное время. В самом начале выполнения эталонного потока в значение 1 выставляется совместно используемая с основным потоком переменная, а после выполнения инструкций - переменная обнуляется. Таким образом, совместно используемая  переменная имеет значение 1 только определённое короткое время.
+
+<p>В основном потоке инициируется цикл определения данных в кэше методом pLRU. Признаком наличия или отсутствия в кэше проверяемых данных является не измерение времени таймером, а состояние совместной переменной после проверки. Если переменная имеет значение 1, то операция завершена быстрее, чем был выполнен эталонный код в параллельном потоке, т.е. данные были отданы из кэша. Если переменная содержит значение 0, то операция выполнялась относительно долго из-за отсутствия данных в кэше и эталонный код в параллельном потоке успел полностью отработать. 
+
+<center><a href="https://ileakage.com/files/ileakage.pdf"><img src="https://www.opennet.ru/opennews/pics_base/CFD0C5CECEC5D4_1698390380.png" style="border-style: solid; border-color: #606060; border-width: 1px;max-width:100%;" title="" border=0></a></center>
+
+
+<p>Точность предложенного метода определения содержимого кэша составляет от 90% до 99%, а производительность определения данных от 23 до 34 байт в секунду, в зависимости от процессора и устройства. Перед проведением атаки требуется калибровка эталонного кода, которая занимает примерно пять минут. После завершения калибровки для текущей системы на извлечение 64-символьной строки уходит примерно 30 секунд.
+
+
+<br><br>
+<center><a href="https://ileakage.com/files/ileakage.pdf"><img src="https://www.opennet.ru/opennews/pics_base/CFD0C5CECEC5D4_1698394888.png" style="border-style: solid; border-color: #e9ead6; border-width: 15px;max-width:100%;" title="" border=0></a></center>
+
+
+<br><br>
+<center><img src="https://www.opennet.ru/opennews/pics_base/CFD0C5CECEC5D4_1698394474.png" style="border-style: solid; border-color: #606060; border-width: 1px;max-width:100%;" title="" border=0></center>
+
+<br><br>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2uH9slLKTjw?si=yFXOYHp2nzPZMk80" title="YouTube video player" frameborder="0" allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="max-width: 100%;"></iframe>
+</center>
+
+
+<p>Дополнительно можно отметить <a href="https://vu.ls/blog/exploiting-zenbleed-from-chrome/">публикацию</a> прототипа <a href="https://github.com/vu-ls/Zenbleed-Chrome-PoC">эксплоита</a>, использующего уязвимость <a href="https://www.opennet.ru/opennews/art.shtml?num=59491">Zenbleed</a> в процессорах AMD на базе микроархитектуры Zen2 для извлечения данных, обрабатываемых в других процессах, при открытии страницы с эксплоитом в Chrome. Кроме уязвимости Zenbleed (CVE-2023-20593) в эксплоите также задействована уязвимость <a href="https://github.com/mistymntncop/CVE-2023-3079">CVE-2023-3079</a> в движке  V8, исправленная в Chrome 115.
+
+
+
+
+
+<br><br>
+</td></tr>
+
+<A NAME="link"></a>
+<tr bgcolor="#D9DAC6"><td>
+<table width="100%" border=0>
+<tr>
+<td>
+<span id="social_link"></span>
+</td>
+<td style="text-align:right" id=edit_link><span class=vt_d><a href="#toptop" onClick="return page_edit('news',60000);" title="Общедоступная правка в wiki-стиле, дополнение текста приветствуется">исправить</a></span>&nbsp; 
+<span id="vt_1_60000" class=vt_d><span class=vt_pp title="всего: +27/-1">+26</span> <a href="#" onClick="return o_vote('1_60000',1);" title="Одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('1_60000',-1);" title="Осуждаю"><span class=vt_m>&ndash;</span></a></span>
+</td>
+</tr></table>
+</td></tr>
+<tr><td>
+<ol>
+    <li><A HREF="https://news.ycombinator.com/item?id=38015277">Главная ссылка к новости (<u>https://news.ycombinator.com/i...</u>)</a></li>
+    <li><A HREF="https://www.opennet.ru/opennews/art.shtml?num=55795">OpenNews: Новая техника эксплуатации уязвимостей класса Spectre в Chrome</a></li>
+    <li><A HREF="https://www.opennet.ru/opennews/art.shtml?num=54751">OpenNews: Google продемонстрировал эксплуатацию уязвимостей Spectre через выполнение JavaScript в браузере</a></li>
+    <li><A HREF="https://www.opennet.ru/opennews/art.shtml?num=49645">OpenNews: Представлена атака на браузеры, позволяющая определить сайт в другой вкладке</a></li>
+    <li><A HREF="https://www.opennet.ru/opennews/art.shtml?num=49608">OpenNews: Семь новых атак на механизм спекулятивного выполнения в CPU</a></li>
+    <li><A HREF="https://www.opennet.ru/opennews/art.shtml?num=48956">OpenNews: Два новых варианта уязвимости Spectre. Усиление защиты Chrome</a></li>
+</ol>
+</td></tr>
+<tr><td title="При перепечатке указание ссылки на opennet.ru обязательно"><small><font color="#707070">Лицензия:</font> <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></small></td></tr>
+<tr><td><small><font color="#707070">Короткая ссылка: https://opennet.ru/60000-apple</font></small></td></td></tr>
+<tr><td><small><font color="#707070">Ключевые слова:</font> <span id="r_keyword_link"><A HREF="/keywords/apple.html">apple</A>, <A HREF="/keywords/spectre.html">spectre</A>, <A HREF="/keywords/webkit.html">webkit</A>, <A HREF="/keywords/safari.html">safari</A>, <A HREF="/keywords/attack.html">attack</A></span></small></td></tr>
+</table>
+<div id="lenta_nav"></div>
+<tr><td><center><small><font color="#505050">При перепечатке указание ссылки на opennet.ru обязательно</font></small></center></td></tr>
+<br><br>
+
+<table class="thdr"><tr><td style="text-align:left;"><b>Обсуждение</b> <a href="/openforum/vsluhforumID3/131905.html#TOP" title="Число ответов">(109)</a></td><!--131905--><td align=right style="font: 100% Arial;"><span class=vt_d>
+<span id=smode style="display: none;"><a href="/openforum/vsluhforumID3/131905.html" rel="nofollow" onclick="text_type=4;do_switch_thread(131905, 3); return false;" title="Исходный режим">Основной режим</a> |</span>
+<a id=smode0 href="/openforum/vsluhforumID3/131905.html" rel="nofollow" onclick="text_type=0;do_switch_thread(131905, 3); return false;" title="Отображение дерева сообщений через Ajax с раскрытием непрочитанных.">Ajax</a> | <a id=smode3 href="/openforum/vsluhforumID3/131905.html" rel="nofollow" onclick="text_type=3;do_switch_thread(131905, 3); return false;" title="Показать сообщения 1 уровня в режиме Ajax">1 уровень</a> | <a id=smode1 href="/openforum/vsluhforumID3/ubb/131905.html#END" rel="nofollow" onclick="text_type=1;do_switch_thread(131905, 3); return false;" title="Ajax списком в порядке публикации. При открытии в новой вкладке - все сообщения с сортировкой по дате.">Линейный</a> | <a href="#" onclick="text_type=5;do_switch_thread(131905, 3); return false;" title="Ajax с сортировкой по рейтингу.">+/-</a> | <a id=openlnk onclick="return open_block(131905, 3, hidden_msg,0);" href="/openforum/vsluhforumID3/131905.html#1" title="Отключает автоскрытие сообщений в ветке. Режим запоминается.">Раскрыть всё</a> |  
+<a href="/cgi-bin/openforum/rss_forum.cgi?forum=vsluhforumID3&om=131905" style="color: rgb(255, 102, 0);">RSS</a>
+</span><A NAME="comments"></a></td></tr></table><!--131905-->
+
+<table class="ttxt2">
+<tr bgcolor="E9EAD6"><td id=ln131905 class=ctxt>
+<script language="JavaScript" src="/ajax20.js"></script>
+<script language="JavaScript">
+var idx_nextans_list = {11:55,9:12,41:57,35:62,105:119,62:67,107:141,34:46,101:124,46:123,8:10,19:28,10:148,1:2,2:3,7:14,3:4,4:15,16:22,15:23,27:30,30:60,73:85,60:77,77:89,23:29,36:76,93:125,143:146,76:104,104:112,126:150}; 
+var idx_prevans_list = {55:11,12:9,57:41,62:35,119:105,67:62,141:107,46:34,124:101,123:46,10:8,28:19,148:10,2:1,3:2,14:7,4:3,15:4,22:16,23:15,30:27,60:30,85:73,77:60,89:77,29:23,76:36,125:93,146:143,104:76,112:104,150:126}; 
+var idx_anon_list = {'Аноним324':0,'Аноним':4,'InuYasha':1,'коньюктив ит':0,'coocos':0,'iPony129412':0,'Всем Анонимам Аноним':0,'_':1,'Массоны Рептилоиды':0,'Sw00p aka Jerom':0,'Tron is Whistling':0,'AKTEON':0,'Anononononon':0,'Хамасов Ксир Хазболлатович':0,'Денис Попов':0,'лютый арчешкольник...':0};
+var idx_ans_map = {131905: {32:[33],125:[135,143,146],16:[75],27:[47],57:[106],35:[38],11:[17],93:[142],65:[71],138:[139],15:[16,22],60:[70],73:[115],101:[128],76:[93,125],62:[74],139:[145],2:[13],17:[37],145:[149],104:[151],23:[27,30,60,77,89,113],126:[137,152],47:[80],8:[9,12,34,46,123],37:[45],5:[7,14],33:[42],21:[40],7:[26],26:[53],74:[100],10:[19,28],48:[131],107:[109,127],77:[78],123:[129,138],41:[99],45:[56],19:[31,32],70:[73,85],1:[8,10,148],30:[136],141:[144,147],100:[105,119],28:[52],75:[91],40:[140],150:[154],143:[153],22:[49],42:[44,48],46:[50,101,124],13:[21],105:[121],36:[65],3:[5],9:[11,55],38:[41,57],4:[72,117],34:[35,62,67,107,141]}}; 
+</script>
+<div id="infoblock_1"></div>
+<a name="1"></a><table class=cblk id="msgshow_1"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#1"><font color="#606060">1.1</font></a>, <a href="/~12yoexpert" class="nick">12yoexpert</a> (<span title='Авторизован'>ok</span>), 12:25, 27/10/2023  [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=1&news_key=60000" rel="nofollow">ответить</a>] [<a href="/openforum/vsluhforumID3/131905.html#1" onClick="return open_comments(131905,3,1);" title="Показать все нераскрытые сообщения в подветке">&#65122;&#65122;&#65122;</a>] [<a href="#" onClick="return collapse_comments(131905,1,3,1);" title="Свернуть ветку">&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;</a>] &nbsp;<script>s_n_a2(1698391516,'12yoexpert','vsluhforumID3', 131905, 1)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_1" class=vt_d2><span class=vt_mm title="всего: +17/-18">&ndash;1</span> <a href="#" onClick="return o_vote('2_3_131905_1',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_1',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 style="border-left:3px solid #C9CAB6;">
+<a href="/~12yoexpert"><img src="/avatar/5bca4be8c22942c211324bd267a24d63.jpg" width=40 height=40 border=0 align=right></a>&quot;cpu от apple&quot; это те армовские затычки вместо проца?
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+<div id=actshow_0_1>
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="8"></a><table class=cblk id="msgshow_8"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#8"><font color="#606060">2.8</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD324" class="nick">Аноним324</a> (<span title='Ник без авторизации'>?</span>), 12:50, 27/10/2023 [<a href=#1 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=8&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698393015,'Аноним324','vsluhforumID3', 131905, 8)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_8" class=vt_d2><span class=vt_pp title="всего: +13/-12">+1</span> <a href="#" onClick="return o_vote('2_3_131905_8',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_8',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Фига себе затычки. м чипы вполне сопоставимы по мощам с ноутбучными x86 те которые серия U и P. Серия А чипов, как была самой мощной среди мобильных устройств так ею и остаётся.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="9"></a><table class=cblk id="msgshow_9"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#9"><font color="#606060">3.9</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD324" class="nick">Аноним324</a> (<span title='Ник без авторизации'>?</span>), 12:55, 27/10/2023 [<a href=#8 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=9&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698393303,'Аноним324','vsluhforumID3', 131905, 9)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_9" class=vt_d2><span class=vt_pp title="всего: +15/-8">+7</span> <a href="#" onClick="return o_vote('2_3_131905_9',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_9',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Ну и если говорить на чистоту, даже чип айфона 6S который вышел миллиард лет назад, мощнее компов местных обитателей, так что называть эти армы затычками, это глупо.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="11"></a><table class=cblk id="msgshow_11"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#11"><font color="#606060">4.11</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>11</span>), 12:56, 27/10/2023 [<a href=#9 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=11&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698393389,'Аноним','vsluhforumID3', 131905, 11)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_11" class=vt_d2><span class=vt_pp title="всего: +4/-0">+4</span> <a href="#" onClick="return o_vote('2_3_131905_11',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_11',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+в топ500 так и не нашел
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="17"></a><table class=cblk id="msgshow_17"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#17"><font color="#606060">5.17</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD324" class="nick">Аноним324</a> (<span title='Ник без авторизации'>?</span>), 13:04, 27/10/2023 [<a href=#11 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=17&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698393890,'Аноним324','vsluhforumID3', 131905, 17)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_17" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_17',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_17',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<font color=#606060>&gt; в топ500 так и не нашел </font>
+<p>Свой пк ты там тоже не найдёшь. И каким таким образом потребительский процессор, должен оказатся в листе топ500 суперкомпов? Где связь?
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="37"></a><table class=cblk id="msgshow_37"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#37"><font color="#606060">6.37</font></a>, <a href="/~InuYasha" class="nick">InuYasha</a> (<span title='Ник без авторизации'>??</span>), 13:52, 27/10/2023 [<a href=#17 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=37&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698396760,'InuYasha','vsluhforumID3', 131905, 37)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_37" class=vt_d2><span class=vt_pp title="всего: +1/-0">+1</span> <a href="#" onClick="return o_vote('2_3_131905_37',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_37',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+а он разве говорил о суперкомпах?
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="45"></a><table class=cblk id="msgshow_45"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#45"><font color="#606060">7.45</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD324" class="nick">Аноним324</a> (<span title='Авторизован'>ok</span>), 14:03, 27/10/2023 [<a href=#37 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=45&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698397390,'Аноним324','vsluhforumID3', 131905, 45)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_45" class=vt_d2><span class=vt_pp title="всего: +1/-0">+1</span> <a href="#" onClick="return o_vote('2_3_131905_45',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_45',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<a href="/~%E1%CE%CF%CE%C9%CD324"><img src="/avatar/b0cb68e10f02006c4bcb0d89a0197f54.jpg" width=40 height=40 border=0 align=right></a>а какой ещё лист топ 500 тут регулярно упоминается? 
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="56"></a><table class=cblk id="msgshow_56"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#56"><font color="#606060">8.56</font></a>, <a href="/~%CB%CF%CE%D8%C0%CB%D4%C9%D7%20%C9%D4">коньюктив ит</a> (<span title='Ник без авторизации'>?</span>), 14:35, 27/10/2023 [<a href=#45 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=56&news_key=60000" rel="nofollow">ответить</a>]  &nbsp;<script>s_n_a2(1698399311,'коньюктив ит','vsluhforumID3', 131905, 56)</script></td><td class=chdr2><span id="vt_2_3_131905_56" class=vt_d2><span class=vt_pp title="всего: +7/-0">+7</span> <a href="#" onClick="return o_vote('2_3_131905_56',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_56',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2  id=t131905_56><div id=thd131905_56 onclick="do_show_thread0(131905,56,3);" style="font-size: 90%; color: #606060">Top Pentium III... <font color="#A07070">текст свёрнут, <a onclick="return do_show_thread0(131905,56,3);" href="/cgi-bin/openforum/vsluhboard.cgi?az=show_thread&om=131905&forum=vsluhforumID3&omm=56" rel="nofollow">показать</a></div></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+
+
+<a name="55"></a><table class=cblk id="msgshow_55"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#55"><font color="#606060">4.55</font></a>, <a href="/~%CB%CF%CE%D8%C0%CB%D4%C9%D7%20%C9%D4" class="nick">коньюктив ит</a> (<span title='Ник без авторизации'>?</span>), 14:33, 27/10/2023 [<a href=#9 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=55&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698399215,'коньюктив ит','vsluhforumID3', 131905, 55)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_55" class=vt_d2><span class=vt_mm title="всего: +0/-1">&ndash;1</span> <a href="#" onClick="return o_vote('2_3_131905_55',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_55',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<font color=#606060>&gt; даже чип айфона 6S который вышел миллиард лет назад, мощнее компов местных обитателей</font>
+<p>О, да!
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+
+
+<a name="12"></a><table class=cblk id="msgshow_12"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#12"><font color="#606060">3.12</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>12</span>), 12:56, 27/10/2023 [<a href=#8 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=12&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698393412,'Аноним','vsluhforumID3', 131905, 12)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_12" class=vt_d2><span class=vt_pp title="всего: +11/-2">+9</span> <a href="#" onClick="return o_vote('2_3_131905_12',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_12',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Это где тебе такую чушь сказали маркетологи по телеку? 
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+
+<a name="34"></a><table class=cblk id="msgshow_34"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#34"><font color="#606060">3.34</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>34</span>), 13:43, 27/10/2023 [<a href=#8 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=34&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698396234,'Аноним','vsluhforumID3', 131905, 34)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_34" class=vt_d2><span class=vt_pp title="всего: +6/-2">+4</span> <a href="#" onClick="return o_vote('2_3_131905_34',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_34',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+запусти мне на этих сопоставимых хоть одну программу не из магазина эпла
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="35"></a><table class=cblk id="msgshow_35"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#35"><font color="#606060">4.35</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD324" class="nick">Аноним324</a> (<span title='Авторизован'>ok</span>), 13:46, 27/10/2023 [<a href=#34 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=35&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698396405,'Аноним324','vsluhforumID3', 131905, 35)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_35" class=vt_d2><span class=vt_mm title="всего: +1/-9">&ndash;8</span> <a href="#" onClick="return o_vote('2_3_131905_35',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_35',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<a href="/~%E1%CE%CF%CE%C9%CD324"><img src="/avatar/b0cb68e10f02006c4bcb0d89a0197f54.jpg" width=40 height=40 border=0 align=right></a><font color=#606060>&gt;запусти мне на этих сопоставимых хоть одну программу не из магазина эпла</font>
+<p>У тебя есть браузер. Запускай. А так то проблем чтобы установить приложение с апстора у меня нет.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="38"></a><table class=cblk id="msgshow_38"><tr><td class=chdr><li><font color="#606060">5.38</font>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Номер первого сообщения'>34</span>), 13:53, 27/10/2023 <a href="#" onclick="do_show_thread0(131905,38,3); return false;" style="color: #606060;">Скрыто ботом-модератором</a>  &nbsp;&nbsp;&nbsp;&nbsp;[<a href="/cgi-bin/openforum/vsluhboard.cgi?az=to_moderator&forum=vsluhforumID3&om=131905&omm=38" rel="nofollow">к&nbsp;модератору</a>]</td><td class=chdr2><span id="vt_2_3_131905_38" class=vt_d2><span class=vt_pp title="всего: +6/-0">+6</span> <a href="#" onClick="return o_vote('2_3_131905_38',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_38',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt style="font-size: 90%; color: #606060" id=t131905_38><div id=thd131905_38></div></td></tr><tr><td>&nbsp;</td></tr></table>
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="41"></a><table class=cblk id="msgshow_41"><tr><td class=chdr><li><font color="#606060">6.41</font>, <a href="/~%E1%CE%CF%CE%C9%CD324" class="nick">Аноним324</a> (<span title='Авторизован'>ok</span>), 13:55, 27/10/2023 <a href="#" onclick="do_show_thread0(131905,41,3); return false;" style="color: #606060;">Скрыто ботом-модератором</a>  &nbsp;&nbsp;&nbsp;&nbsp;[<a href="/cgi-bin/openforum/vsluhboard.cgi?az=to_moderator&forum=vsluhforumID3&om=131905&omm=41" rel="nofollow">к&nbsp;модератору</a>]</td><td class=chdr2><span id="vt_2_3_131905_41" class=vt_d2><span class=vt_mm title="всего: +2/-4">&ndash;2</span> <a href="#" onClick="return o_vote('2_3_131905_41',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_41',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt style="font-size: 90%; color: #606060" id=t131905_41><div id=thd131905_41></div></td></tr><tr><td>&nbsp;</td></tr></table>
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="99"></a><table class=cblk id="msgshow_99"><tr><td class=chdr><li><font color="#606060">7.99</font>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Номер первого сообщения'>34</span>), 17:42, 27/10/2023 <a href="#" onclick="do_show_thread0(131905,99,3); return false;" style="color: #606060;">Скрыто ботом-модератором</a>  &nbsp;&nbsp;&nbsp;&nbsp;[<a href="/cgi-bin/openforum/vsluhboard.cgi?az=to_moderator&forum=vsluhforumID3&om=131905&omm=99" rel="nofollow">к&nbsp;модератору</a>]</td><td class=chdr2><span id="vt_2_3_131905_99" class=vt_d2><span class=vt_pp title="всего: +2/-1">+1</span> <a href="#" onClick="return o_vote('2_3_131905_99',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_99',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt style="font-size: 90%; color: #606060" id=t131905_99><div id=thd131905_99></div></td></tr><tr><td>&nbsp;</td></tr></table>
+</td></tr></table>
+
+
+<a name="57"></a><table class=cblk id="msgshow_57"><tr><td class=chdr><li><font color="#606060">6.57</font>, <a href="/~%CB%CF%CE%D8%C0%CB%D4%C9%D7%20%C9%D4" class="nick">коньюктив ит</a> (<span title='Ник без авторизации'>?</span>), 14:38, 27/10/2023 <a href="#" onclick="do_show_thread0(131905,57,3); return false;" style="color: #606060;">Скрыто ботом-модератором</a>  &nbsp;&nbsp;&nbsp;&nbsp;[<a href="/cgi-bin/openforum/vsluhboard.cgi?az=to_moderator&forum=vsluhforumID3&om=131905&omm=57" rel="nofollow">к&nbsp;модератору</a>]</td><td class=chdr2><span id="vt_2_3_131905_57" class=vt_d2><span class=vt_mm title="всего: +0/-1">&ndash;1</span> <a href="#" onClick="return o_vote('2_3_131905_57',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_57',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt style="font-size: 90%; color: #606060" id=t131905_57><div id=thd131905_57></div></td></tr><tr><td>&nbsp;</td></tr></table>
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="106"></a><table class=cblk id="msgshow_106"><tr><td class=chdr><li><font color="#606060">7.106</font>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Номер первого сообщения'>34</span>), 18:58, 27/10/2023 <a href="#" onclick="do_show_thread0(131905,106,3); return false;" style="color: #606060;">Скрыто ботом-модератором</a>  &nbsp;&nbsp;&nbsp;&nbsp;[<a href="/cgi-bin/openforum/vsluhboard.cgi?az=to_moderator&forum=vsluhforumID3&om=131905&omm=106" rel="nofollow">к&nbsp;модератору</a>]</td><td class=chdr2><span id="vt_2_3_131905_106" class=vt_d2><span class=vt_pp title="всего: +1/-0">+1</span> <a href="#" onClick="return o_vote('2_3_131905_106',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_106',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt style="font-size: 90%; color: #606060" id=t131905_106><div id=thd131905_106></div></td></tr><tr><td>&nbsp;</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+
+
+<a name="62"></a><table class=cblk id="msgshow_62"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#62"><font color="#606060">4.62</font></a>, <a href="/~coocos" class="nick">coocos</a> (<span title='Ник без авторизации'>?</span>), 14:50, 27/10/2023 [<a href=#34 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=62&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698400211,'coocos','vsluhforumID3', 131905, 62)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_62" class=vt_d2><span class=vt_pp title="всего: +1/-0">+1</span> <a href="#" onClick="return o_vote('2_3_131905_62',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_62',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Давай! Какую тебе программу запустить?
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="74"></a><table class=cblk id="msgshow_74"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#74"><font color="#606060">5.74</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>74</span>), 16:12, 27/10/2023 [<a href=#62 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=74&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698405130,'Аноним','vsluhforumID3', 131905, 74)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_74" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_74',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_74',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Ansys Workbench, например.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="100"></a><table class=cblk id="msgshow_100"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#100"><font color="#606060">6.100</font></a>, <a href="/~coocos" class="nick">coocos</a> (<span title='Ник без авторизации'>?</span>), 17:42, 27/10/2023 [<a href=#74 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=100&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698410568,'coocos','vsluhforumID3', 131905, 100)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_100" class=vt_d2><span class=vt_pp title="всего: +1/-0">+1</span> <a href="#" onClick="return o_vote('2_3_131905_100',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_100',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<a href="/~coocos"><img src="/avatar/af11573b33d4ba18463518094cdd2902.jpg" width=40 height=40 border=0 align=right></a>Будут адекватные опенсурс варианты? Нашел пропритарщину, которая выпускается только по х86 и где нет поддержки macos. Можно через виртуалку с виндой запустить.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="105"></a><table class=cblk id="msgshow_105"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#105"><font color="#606060">7.105</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>105</span>), 18:51, 27/10/2023 [<a href=#100 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=105&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698414692,'Аноним','vsluhforumID3', 131905, 105)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_105" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_105',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_105',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<font color=#606060>&gt; адекватные опенсурс варианты</font>
+<p>Здесь оксюморон вообще-то. Или адекватные, или опенсурс.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="121"></a><table class=cblk id="msgshow_121"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#121"><font color="#606060">8.121</font></a>, <a href="/~coocos">coocos</a> (<span title='Ник без авторизации'>?</span>), 23:25, 27/10/2023 [<a href=#105 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=121&news_key=60000" rel="nofollow">ответить</a>]  &nbsp;<script>s_n_a2(1698431139,'coocos','vsluhforumID3', 131905, 121)</script></td><td class=chdr2><span id="vt_2_3_131905_121" class=vt_d2><span class=vt_pp title="всего: +1/-0">+1</span> <a href="#" onClick="return o_vote('2_3_131905_121',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_121',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2  id=t131905_121><div id=thd131905_121 onclick="do_show_thread0(131905,121,3);" style="font-size: 90%; color: #606060"><a href="/~coocos"><img src="/avatar/af11573b33d4ba18463518094cdd2902.jpg" width=40 height=40 border=0 align=right></a>А смысл запускать то что нужно полутору землекопу  Они и на венде потерпят  Изна... <font color="#A07070">текст свёрнут, <a onclick="return do_show_thread0(131905,121,3);" href="/cgi-bin/openforum/vsluhboard.cgi?az=show_thread&om=131905&forum=vsluhforumID3&omm=121" rel="nofollow">показать</a></div></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+</td></tr></table>
+
+
+<a name="119"></a><table class=cblk id="msgshow_119"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#119"><font color="#606060">7.119</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Номер первого сообщения'>74</span>), 22:21, 27/10/2023 [<a href=#100 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=119&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698427289,'Аноним','vsluhforumID3', 131905, 119)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_119" class=vt_d2><span class=vt_mm title="всего: +0/-1">&ndash;1</span> <a href="#" onClick="return o_vote('2_3_131905_119',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_119',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Слив засчитан.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+
+
+<a name="67"></a><table class=cblk id="msgshow_67"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#67"><font color="#606060">4.67</font></a>, <a href="/~iPony129412" class="nick">iPony129412</a> (<span title='Ник без авторизации'>?</span>), 15:25, 27/10/2023 [<a href=#34 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=67&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698402352,'iPony129412','vsluhforumID3', 131905, 67)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_67" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_67',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_67',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+элементарно запускается, в чём проблема?
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+
+<a name="107"></a><table class=cblk id="msgshow_107"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#107"><font color="#606060">4.107</font></a>, <a href="/~%F7%D3%C5%CD%20%E1%CE%CF%CE%C9%CD%C1%CD%20%E1%CE%CF%CE%C9%CD" class="nick">Всем Анонимам Аноним</a> (<span title='Ник без авторизации'>?</span>), 19:04, 27/10/2023 [<a href=#34 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=107&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698415482,'Всем Анонимам Аноним','vsluhforumID3', 131905, 107)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_107" class=vt_d2><span class=vt_mm title="всего: +1/-2">&ndash;1</span> <a href="#" onClick="return o_vote('2_3_131905_107',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_107',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+macports, brew есть. очень много образов на docker hub включают arm64 компиляцию.
+<br>IntelliJ работает отлично, например. MS Office. Firefox.
+<p>Не забывайте, что софт, которым Вы пользуетесь, в основном написан на маках. Кроме MS наверное, но я не удивлюсь если и там уже всем разрешили раздать.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="109"></a><table class=cblk id="msgshow_109"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#109"><font color="#606060">5.109</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>109</span>), 19:36, 27/10/2023 [<a href=#107 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=109&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698417402,'Аноним','vsluhforumID3', 131905, 109)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_109" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_109',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_109',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+А там никогда и не запрещали. Другое дело, если тебе там винда нужна для выполнения профобязанностей.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+
+<a name="127"></a><table class=cblk id="msgshow_127"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#127"><font color="#606060">5.127</font></a>, <a href="/~_">_</a> (<span title='Ник без авторизации'>??</span>), 04:16, 28/10/2023 [<a href=#107 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=127&news_key=60000" rel="nofollow">ответить</a>]  &nbsp;<script>s_n_a2(1698448594,'_','vsluhforumID3', 131905, 127)</script></td><td class=chdr2><span id="vt_2_3_131905_127" class=vt_d2><span class=vt_mm title="всего: +1/-2">&ndash;1</span> <a href="#" onClick="return o_vote('2_3_131905_127',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_127',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2  id=t131905_127><div id=thd131905_127 onclick="do_show_thread0(131905,127,3);" style="font-size: 90%; color: #606060">Щаз     На маках только драйвера для дильды пишут и весь mac-ако-овеббинг     А ... <font color="#A07070">большой текст свёрнут, <a onclick="return do_show_thread0(131905,127,3);" href="/cgi-bin/openforum/vsluhboard.cgi?az=show_thread&om=131905&forum=vsluhforumID3&omm=127" rel="nofollow">показать</a></div></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+</td></tr></table>
+
+
+<a name="141"></a><table class=cblk id="msgshow_141"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#141"><font color="#606060">4.141</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>141</span>), 18:53, 28/10/2023 [<a href=#34 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=141&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698501205,'Аноним','vsluhforumID3', 131905, 141)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_141" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_141',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_141',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Ты троллишь или как? 
+<br>На маках всегда можно было запускать приложения не из магазина, на арм тоже. 
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="144"></a><table class=cblk id="msgshow_144"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#144"><font color="#606060">5.144</font></a>, <a href="/~_" class="nick">_</a> (<span title='Ник без авторизации'>??</span>), 22:26, 28/10/2023 [<a href=#141 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=144&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698513966,'_','vsluhforumID3', 131905, 144)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_144" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_144',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_144',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Ещё бы они были те приложения, которые можно запускать :-&#092;
+<br>Ну я не спорю - их в последнее время стало вдвое больше!
+<br>Теперь их целых 6! :-D
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+
+<a name="147"></a><table class=cblk id="msgshow_147"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#147"><font color="#606060">5.147</font></a>, <a href="/~AlexYeCu" class="nick">AlexYeCu</a> (<span title='Авторизован'>ok</span>), 23:21, 28/10/2023 [<a href=#141 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=147&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698517271,'AlexYeCu','vsluhforumID3', 131905, 147)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_147" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_147',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_147',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<a href="/~AlexYeCu"><img src="/avatar/9caa9b35680c7a5d4f2bcfb61553a977.jpg" width=40 height=40 border=0 align=right></a><font color=#606060>&gt;На маках всегда можно было запускать приложения не из магазина, на арм тоже.</font>
+<p>Ну не то чтобы прям всегда: был у них не особо давно один чудный факап&#8230;
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+</td></tr></table>
+
+
+<a name="46"></a><table class=cblk id="msgshow_46"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#46"><font color="#606060">3.46</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>46</span>), 14:04, 27/10/2023 [<a href=#8 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=46&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698397492,'Аноним','vsluhforumID3', 131905, 46)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_46" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_46',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_46',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Тут дело не в затычках, а в том что они упарываются по оптимизации своего софта под эти затычки
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="50"></a><table class=cblk id="msgshow_50"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#50"><font color="#606060">4.50</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD324" class="nick">Аноним324</a> (<span title='Авторизован'>ok</span>), 14:08, 27/10/2023 [<a href=#46 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=50&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698397694,'Аноним324','vsluhforumID3', 131905, 50)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_50" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_50',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_50',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<a href="/~%E1%CE%CF%CE%C9%CD324"><img src="/avatar/b0cb68e10f02006c4bcb0d89a0197f54.jpg" width=40 height=40 border=0 align=right></a><font color=#606060>&gt; Тут дело не в затычках, а в том что они упарываются по </font>
+<br><font color=#606060>&gt; оптимизации своего софта под эти затычки </font>
+<p>Ну просто нет огромной фрагментации. 
+<p></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+
+<a name="101"></a><table class=cblk id="msgshow_101"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#101"><font color="#606060">4.101</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Номер первого сообщения'>34</span>), 17:43, 27/10/2023 [<a href=#46 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=101&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698410619,'Аноним','vsluhforumID3', 131905, 101)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_101" class=vt_d2><span class=vt_pp title="всего: +2/-0">+2</span> <a href="#" onClick="return o_vote('2_3_131905_101',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_101',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+ага, почти 20 лет это слышим в рекламках. только софта 1.5 глючных бесполезных проги, а больше ничего не запустить
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="128"></a><table class=cblk id="msgshow_128"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#128"><font color="#606060">5.128</font></a>, <a href="/~_" class="nick">_</a> (<span title='Ник без авторизации'>??</span>), 04:18, 28/10/2023 [<a href=#101 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=128&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698448714,'_','vsluhforumID3', 131905, 128)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_128" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_128',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_128',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Дык эта ... времена электрона жи :( Уже не полторы а целый 2.5! :)
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+
+
+<a name="124"></a><table class=cblk id="msgshow_124"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#124"><font color="#606060">4.124</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>124</span>), 02:17, 28/10/2023 [<a href=#46 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=124&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698441440,'Аноним','vsluhforumID3', 131905, 124)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_124" class=vt_d2><span class=vt_pp title="всего: +1/-0">+1</span> <a href="#" onClick="return o_vote('2_3_131905_124',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_124',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Я и сам могу из исходников браузер собрать и получить +50&#037; производительности. Мне раз в месяц не впадлу после Gentoo. Сразу лапша маркетолухов с ушей спадает.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+
+
+<a name="123"></a><table class=cblk id="msgshow_123"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#123"><font color="#606060">3.123</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Номер первого сообщения'>124</span>), 02:15, 28/10/2023 [<a href=#8 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=123&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698441340,'Аноним','vsluhforumID3', 131905, 123)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_123" class=vt_d2><span class=vt_mm title="всего: +0/-1">&ndash;1</span> <a href="#" onClick="return o_vote('2_3_131905_123',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_123',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Мощность не все что требуется. Затычка с 16-32 гигами просто помрет над видео в 8К, который могут многие смартфоны в 60 кадров делать, если ты не даун неспособный в поиск gcam конечно же.
+<br>Ну или иди паяй модули на плате хотя бы до 128 гигов. А нынешние 48гб модули положат на лопатки своими 192гб потенциальными, а в перспективе и болшем объеме.
+<br>Так что лучше 12900к-13900к-14900к и 7950х брать за основу нормального ПК.
+<br>96-ядерный тридриппер напрочь ушатает любой выхлоп от яблока, особенно с пачкой видеокарт и оптоволоконной сетью.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="129"></a><table class=cblk id="msgshow_129"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#129"><font color="#606060">4.129</font></a>, <a href="/~_" class="nick">_</a> (<span title='Ник без авторизации'>??</span>), 04:26, 28/10/2023 [<a href=#123 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=129&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698449160,'_','vsluhforumID3', 131905, 129)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_129" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_129',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_129',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Пля нынешнего программинга надо много проца, много и памяти и много быстрых и ёмких дисков и оптику диаметром с газопровод до облаков ...
+<br>А на маке даже жаба кривая - ну вот нафиг оно в энтерпрайсе?
+<br>А если не в энерпрайсе ... малина 400 - идеаль для хобби программинга :)
+<br>Бро - mac не нужен. Телефоны ихние - ничего, а контуперы ... шлак 
+<br>Ну разве только взять интерёвый и Линукс туда нахлобучить :-р Прада смысл всё равно от меня ускальзает :)
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+
+<a name="138"></a><table class=cblk id="msgshow_138"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#138"><font color="#606060">4.138</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD324" class="nick">Аноним324</a> (<span title='Авторизован'>ok</span>), 17:17, 28/10/2023 [<a href=#123 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=138&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698495468,'Аноним324','vsluhforumID3', 131905, 138)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_138" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_138',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_138',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<a href="/~%E1%CE%CF%CE%C9%CD324"><img src="/avatar/b0cb68e10f02006c4bcb0d89a0197f54.jpg" width=40 height=40 border=0 align=right></a>Когда это смартфоны научились в 8К видео в 60 кадров?
+<p><font color=#606060>&gt;96-ядерный тридриппер напрочь ушатает любой выхлоп от яблока, особенно с пачкой видеокарт и оптоволоконной сетью.</font>
+<p>Ну никто не спорит, что ушатает, но твой 96 ядерный трипер сколько электричества жрёт, сколько тепла выделяет, и какое отношение он имеет к ноутбукам?
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="139"></a><table class=cblk id="msgshow_139"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#139"><font color="#606060">5.139</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD324" class="nick">Аноним324</a> (<span title='Авторизован'>ok</span>), 17:22, 28/10/2023 [<a href=#138 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=139&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698495744,'Аноним324','vsluhforumID3', 131905, 139)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_139" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_139',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_139',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<a href="/~%E1%CE%CF%CE%C9%CD324"><img src="/avatar/b0cb68e10f02006c4bcb0d89a0197f54.jpg" width=40 height=40 border=0 align=right></a><font color=#606060>&gt; Когда это смартфоны научились в 8К видео в 60 кадров?</font>
+<br><font color=#606060>&gt;&gt;96-ядерный тридриппер напрочь ушатает любой выхлоп от яблока, особенно с пачкой видеокарт и оптоволоконной сетью.</font>
+<br><font color=#606060>&gt; Ну никто не спорит, что ушатает, но твой 96 ядерный трипер сколько </font>
+<br><font color=#606060>&gt; электричества жрёт, сколько тепла выделяет, и какое отношение он имеет к </font>
+<br><font color=#606060>&gt; ноутбукам?</font>
+<p>Ещё одно, найди мне ультрабук, который будет мощнее мака, в цене 1500-3000 долларов, будет работать 15 часов, и не будет игровым гробом со свистоперделками.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="145"></a><table class=cblk id="msgshow_145"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#145"><font color="#606060">6.145</font></a>, <a href="/~_" class="nick">_</a> (<span title='Ник без авторизации'>??</span>), 22:33, 28/10/2023 [<a href=#139 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=145&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698514407,'_','vsluhforumID3', 131905, 145)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_145" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_145',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_145',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+А _зачем_ мне ультрабук с экранчиком сравнимым по размеру с MaxPro и который на батарейке 15 часов живёт?!?! Ну если ты не сутенёр какой-нить, на окраине сельской дороги - у тебя есть розетка да и большой экран тебе нужен почти всегда.
+<br>А если убрать 15 часов на батарейке (хотя это тоже лажа - они столько не живут если на них _работать_) - то поробуй найдим мне нотик _хуже_ мака :)
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="149"></a><table class=cblk id="msgshow_149"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#149"><font color="#606060">7.149</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD324" class="nick">Аноним324</a> (<span title='Авторизован'>ok</span>), 10:54, 29/10/2023 [<a href=#145 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=149&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698558885,'Аноним324','vsluhforumID3', 131905, 149)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_149" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_149',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_149',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<a href="/~%E1%CE%CF%CE%C9%CD324"><img src="/avatar/b0cb68e10f02006c4bcb0d89a0197f54.jpg" width=40 height=40 border=0 align=right></a>ну мне нужен надёжный ноут для того чтобы лазить по карьерам, и у меня выбор либо защищённое промышленное, или мак, и с опыта использования панасоников, макбук реально надёжнее. Он банально крепче, он лёгкий, там ломатся нечему.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+
+
+<a name="10"></a><table class=cblk id="msgshow_10"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#10"><font color="#606060">2.10</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>10</span>), 12:55, 27/10/2023 [<a href=#1 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=10&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698393304,'Аноним','vsluhforumID3', 131905, 10)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_10" class=vt_d2><span class=vt_mm title="всего: +0/-5">&ndash;5</span> <a href="#" onClick="return o_vote('2_3_131905_10',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_10',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+А какие же процы на смартфонах не являются затычками, по мнению 12yoexpert?
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="19"></a><table class=cblk id="msgshow_19"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#19"><font color="#606060">3.19</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD324" class="nick">Аноним324</a> (<span title='Ник без авторизации'>?</span>), 13:07, 27/10/2023 [<a href=#10 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=19&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698394043,'Аноним324','vsluhforumID3', 131905, 19)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_19" class=vt_d2><span class=vt_mm title="всего: +1/-7">&ndash;6</span> <a href="#" onClick="return o_vote('2_3_131905_19',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_19',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<font color=#606060>&gt; А какие же процы на смартфонах не являются затычками, по мнению 12yoexpert? </font>
+<p>Конечно же пентиум 3. Что же может быть не затычкой. Пентиум 3, с потреблением в 125 Ватт, к слову как современный Core i7 с 20 ядрами.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="31"></a><table class=cblk id="msgshow_31"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#31"><font color="#606060">4.31</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>31</span>), 13:33, 27/10/2023 [<a href=#19 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=31&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698395599,'Аноним','vsluhforumID3', 131905, 31)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_31" class=vt_d2><span class=vt_pp title="всего: +8/-0">+8</span> <a href="#" onClick="return o_vote('2_3_131905_31',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_31',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<font color=#606060>&gt; Пентиум 3, с потреблением в 125 Ватт, </font>
+<p><a href="https://web.archive.org/web/20110308153522/http://ark.intel.com/Product.aspx?id=27525" rel="nofollow">https://web.archive.org/web/20110308153522/http://ark.intel.com/Product.aspx?i</a>
+<br>&#091;CODE&#093;
+<br>Clock Speed	1.4 GHz
+<br>Max TDP 	32.2 W
+<br>&#091;/CODE&#093;
+<br>В общем, обычная опеннетная экспердиза опеннетных экспердов.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+
+<a name="32"></a><table class=cblk id="msgshow_32"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#32"><font color="#606060">4.32</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>32</span>), 13:36, 27/10/2023 [<a href=#19 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=32&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698395785,'Аноним','vsluhforumID3', 131905, 32)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_32" class=vt_d2><span class=vt_pp title="всего: +2/-1">+1</span> <a href="#" onClick="return o_vote('2_3_131905_32',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_32',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Враньё. Первые пни в ноутах без системы охлаждения вообще работали, и крутили всякие офисы и шутеры типа дума. Какой полноценный офис есть под iphone15 ?
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="33"></a><table class=cblk id="msgshow_33"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#33"><font color="#606060">5.33</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD324" class="nick">Аноним324</a> (<span title='Авторизован'>ok</span>), 13:42, 27/10/2023 [<a href=#32 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=33&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698396176,'Аноним324','vsluhforumID3', 131905, 33)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_33" class=vt_d2><span class=vt_pp title="всего: +1/-0">+1</span> <a href="#" onClick="return o_vote('2_3_131905_33',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_33',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<a href="/~%E1%CE%CF%CE%C9%CD324"><img src="/avatar/b0cb68e10f02006c4bcb0d89a0197f54.jpg" width=40 height=40 border=0 align=right></a><font color=#606060>&gt; Враньё. Первые пни в ноутах без системы охлаждения вообще работали, и крутили </font>
+<br><font color=#606060>&gt; всякие офисы и шутеры типа дума. Какой полноценный офис есть под </font>
+<br><font color=#606060>&gt; iphone15 ?</font>
+<p>Любой, майкрософтовский, эпловский, гугловский, wps, и тому подобное. Проблема в том, что последний нормальный телефон с нормальным офисом, были люмии, на Windows Phone.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="42"></a><table class=cblk id="msgshow_42"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#42"><font color="#606060">6.42</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Номер первого сообщения'>34</span>), 13:56, 27/10/2023 [<a href=#33 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=42&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698396996,'Аноним','vsluhforumID3', 131905, 42)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_42" class=vt_d2><span class=vt_pp title="всего: +3/-2">+1</span> <a href="#" onClick="return o_vote('2_3_131905_42',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_42',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+ты про те гигабайты джавы, которые лёгким движением кривой руки вeб-мaкаки сводят на нет 15 лет технического прогресса процессоростроения? (эпол в расчёт не берём, там только деградация, даже на арм скатились)
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="44"></a><table class=cblk id="msgshow_44"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#44"><font color="#606060">7.44</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD324" class="nick">Аноним324</a> (<span title='Авторизован'>ok</span>), 14:00, 27/10/2023 [<a href=#42 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=44&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698397248,'Аноним324','vsluhforumID3', 131905, 44)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_44" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_44',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_44',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<a href="/~%E1%CE%CF%CE%C9%CD324"><img src="/avatar/b0cb68e10f02006c4bcb0d89a0197f54.jpg" width=40 height=40 border=0 align=right></a><font color=#606060>&gt;15 лет технического прогресса процессоростроения</font>
+<p>За последние 15 лет вышло буквально три поколения процессоров, это коры 1-2, кор 3-4, и коры с 5 по 14. Всего три поколения.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+
+<a name="48"></a><table class=cblk id="msgshow_48"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#48"><font color="#606060">7.48</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD324" class="nick">Аноним324</a> (<span title='Авторизован'>ok</span>), 14:04, 27/10/2023 [<a href=#42 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=48&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698397499,'Аноним324','vsluhforumID3', 131905, 48)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_48" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_48',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_48',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<a href="/~%E1%CE%CF%CE%C9%CD324"><img src="/avatar/b0cb68e10f02006c4bcb0d89a0197f54.jpg" width=40 height=40 border=0 align=right></a>ты можешь дальше продолжать пользоватся пиратским майкрософт офисом 2003 запущеным через вайн.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="131"></a><table class=cblk id="msgshow_131"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#131"><font color="#606060">8.131</font></a>, <a href="/~_">_</a> (<span title='Ник без авторизации'>??</span>), 04:31, 28/10/2023 [<a href=#48 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=131&news_key=60000" rel="nofollow">ответить</a>]  &nbsp;<script>s_n_a2(1698449463,'_','vsluhforumID3', 131905, 131)</script></td><td class=chdr2><span id="vt_2_3_131905_131" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_131',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_131',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2  id=t131905_131><div id=thd131905_131 onclick="do_show_thread0(131905,131,3);" style="font-size: 90%; color: #606060">    а кстати почему ви таки это так говог ите, как будто это де что-то плохое   ... <font color="#A07070">текст свёрнут, <a onclick="return do_show_thread0(131905,131,3);" href="/cgi-bin/openforum/vsluhboard.cgi?az=show_thread&om=131905&forum=vsluhforumID3&omm=131" rel="nofollow">показать</a></div></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+
+
+<a name="28"></a><table class=cblk id="msgshow_28"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#28"><font color="#606060">3.28</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Номер первого сообщения'>34</span>), 13:20, 27/10/2023 [<a href=#10 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=28&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698394852,'Аноним','vsluhforumID3', 131905, 28)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_28" class=vt_d2><span class=vt_mm title="всего: +0/-1">&ndash;1</span> <a href="#" onClick="return o_vote('2_3_131905_28',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_28',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+ты в ответ хочешь услышать, как в Америке негров линчуют?
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="52"></a><table class=cblk id="msgshow_52"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#52"><font color="#606060">4.52</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>52</span>), 14:12, 27/10/2023 [<a href=#28 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=52&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698397946,'Аноним','vsluhforumID3', 131905, 52)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_52" class=vt_d2><span class=vt_pp title="всего: +2/-0">+2</span> <a href="#" onClick="return o_vote('2_3_131905_52',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_52',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+А вы таки отрицаете существование BLM?
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+</td></tr></table>
+
+
+<a name="148"></a><table class=cblk id="msgshow_148"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#148"><font color="#606060">2.148</font></a>, <a href="/~leap42" class="nick">leap42</a> (<span title='Авторизован'>ok</span>), 08:23, 29/10/2023 [<a href=#1 title='к родителю'>^</a>] [<a href=#1 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=148&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698549816,'leap42','vsluhforumID3', 131905, 148)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_148" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_148',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_148',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<a href="/~leap42"><img src="/avatar/e7fbc4caca05eeca537753a33404e07c.jpg" width=40 height=40 border=0 align=right></a><font color=#606060>&gt; &quot;cpu от apple&quot; это те армовские затычки вместо проца?</font>
+<p>чтоб вы понимали в этом... эти CPU - state of art, но ОС и диски там паршивые, была бы возможность поставить wd black nvme и Fedora, давно бы купил
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+
+</div>
+<br> <table class="cblk" id="actshow_1_1"><tr><td width="3%">&nbsp;</td><td width="97%" class="ctxt"><a href="#" onclick="vis_invert_msg(0,1,0);return vis_invert_msg(1,1,0);">....большая нить свёрнута, показать (52)</a></td></tr></table><br><script>vis_invert_msg(0,1,0);</script>
+<div id="infoblock_2"></div>
+<a name="2"></a><table class=cblk id="msgshow_2"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#2"><font color="#606060">1.2</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>2</span>), 12:32, 27/10/2023  [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=2&news_key=60000" rel="nofollow">ответить</a>] [<a href="/openforum/vsluhforumID3/131905.html#2" onClick="return open_comments(131905,3,2);" title="Показать все нераскрытые сообщения в подветке">&#65122;&#65122;&#65122;</a>] [<a href="#" onClick="return collapse_comments(131905,2,3,2);" title="Свернуть ветку">&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;</a>] &nbsp;<script>s_n_a2(1698391970,'Аноним','vsluhforumID3', 131905, 2)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_2" class=vt_d2><span class=vt_mm title="всего: +1/-3">&ndash;2</span> <a href="#" onClick="return o_vote('2_3_131905_2',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_2',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 style="border-left:3px solid #C9CAB6;">
+Это не узявимость, а кого надо фича.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+<div id=actshow_0_2>
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="13"></a><table class=cblk id="msgshow_13"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#13"><font color="#606060">2.13</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Номер первого сообщения'>12</span>), 12:57, 27/10/2023 [<a href=#2 title='к родителю'>^</a>] [<a href=#2 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=13&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698393470,'Аноним','vsluhforumID3', 131905, 13)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_13" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_13',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_13',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Ща придут орать про сишников.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="21"></a><table class=cblk id="msgshow_21"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#21"><font color="#606060">3.21</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>21</span>), 13:09, 27/10/2023 [<a href=#13 title='к родителю'>^</a>] [<a href=#2 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=21&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698394170,'Аноним','vsluhforumID3', 131905, 21)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_21" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_21',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_21',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Про червивость огрызка .
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="40"></a><table class=cblk id="msgshow_40"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#40"><font color="#606060">4.40</font></a>, <a href="/~InuYasha" class="nick">InuYasha</a> (<span title='Ник без авторизации'>??</span>), 13:55, 27/10/2023 [<a href=#21 title='к родителю'>^</a>] [<a href=#2 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=40&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698396918,'InuYasha','vsluhforumID3', 131905, 40)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_40" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_40',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_40',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+И растоманов. Кстати, что-то нет Фракта1а, заржавел где-то (
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="140"></a><table class=cblk id="msgshow_140"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#140"><font color="#606060">5.140</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD324" class="nick">Аноним324</a> (<span title='Авторизован'>ok</span>), 17:36, 28/10/2023 [<a href=#40 title='к родителю'>^</a>] [<a href=#2 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=140&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698496586,'Аноним324','vsluhforumID3', 131905, 140)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_140" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_140',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_140',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<a href="/~%E1%CE%CF%CE%C9%CD324"><img src="/avatar/b0cb68e10f02006c4bcb0d89a0197f54.jpg" width=40 height=40 border=0 align=right></a><font color=#606060>&gt; И растоманов. Кстати, что-то нет Фракта1а, заржавел где-то ( </font>
+<p>Потому что это платформа эпла, тут царят Objective-C и Swift
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+
+</div>
+<br><div id="infoblock_3"></div>
+<a name="3"></a><table class=cblk id="msgshow_3"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#3"><font color="#606060">1.3</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>3</span>), 12:36, 27/10/2023  [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=3&news_key=60000" rel="nofollow">ответить</a>] [<a href="/openforum/vsluhforumID3/131905.html#3" onClick="return open_comments(131905,3,3);" title="Показать все нераскрытые сообщения в подветке">&#65122;&#65122;&#65122;</a>] [<a href="#" onClick="return collapse_comments(131905,3,3,3);" title="Свернуть ветку">&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;</a>] &nbsp;<script>s_n_a2(1698392169,'Аноним','vsluhforumID3', 131905, 3)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_3" class=vt_d2><span class=vt_pp title="всего: +6/-0">+6</span> <a href="#" onClick="return o_vote('2_3_131905_3',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_3',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 style="border-left:3px solid #C9CAB6;">
+Снова сайдченнел атака, снова спекулятивное выполнение, красотища. Глазам приятно.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+<div id=actshow_0_3>
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="5"></a><table class=cblk id="msgshow_5"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#5"><font color="#606060">2.5</font></a>, <a href="/~YetAnotherOnanym" class="nick">YetAnotherOnanym</a> (<span title='Авторизован'>ok</span>), 12:38, 27/10/2023 [<a href=#3 title='к родителю'>^</a>] [<a href=#3 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=5&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698392323,'YetAnotherOnanym','vsluhforumID3', 131905, 5)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_5" class=vt_d2><span class=vt_mm title="всего: +2/-3">&ndash;1</span> <a href="#" onClick="return o_vote('2_3_131905_5',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_5',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<a href="/~YetAnotherOnanym"><img src="/avatar/e76ba89a5ed1bc4c42f914f1210fb028.jpg" width=40 height=40 border=0 align=right></a>Но тратить время на забивание памяти нулями мы все равно не будем.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="7"></a><table class=cblk id="msgshow_7"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#7"><font color="#606060">3.7</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>7</span>), 12:48, 27/10/2023 [<a href=#5 title='к родителю'>^</a>] [<a href=#3 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=7&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698392881,'Аноним','vsluhforumID3', 131905, 7)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_7" class=vt_d2><span class=vt_pp title="всего: +3/-1">+2</span> <a href="#" onClick="return o_vote('2_3_131905_7',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_7',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<font color=#606060>&gt; Но тратить время на забивание памяти нулями мы все равно не будем.</font>
+<p>так данные из кеша утекают, но вы забивайте :)
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="26"></a><table class=cblk id="msgshow_26"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#26"><font color="#606060">4.26</font></a>, <a href="/~YetAnotherOnanym" class="nick">YetAnotherOnanym</a> (<span title='Авторизован'>ok</span>), 13:17, 27/10/2023 [<a href=#7 title='к родителю'>^</a>] [<a href=#3 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=26&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698394635,'YetAnotherOnanym','vsluhforumID3', 131905, 26)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_26" class=vt_d2><span class=vt_mm title="всего: +0/-1">&ndash;1</span> <a href="#" onClick="return o_vote('2_3_131905_26',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_26',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<a href="/~YetAnotherOnanym"><img src="/avatar/e76ba89a5ed1bc4c42f914f1210fb028.jpg" width=40 height=40 border=0 align=right></a>А кэш, типа, не разновидность памяти.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="53"></a><table class=cblk id="msgshow_53"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#53"><font color="#606060">5.53</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Номер первого сообщения'>7</span>), 14:12, 27/10/2023 [<a href=#26 title='к родителю'>^</a>] [<a href=#3 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=53&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698397954,'Аноним','vsluhforumID3', 131905, 53)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_53" class=vt_d2><span class=vt_pp title="всего: +1/-0">+1</span> <a href="#" onClick="return o_vote('2_3_131905_53',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_53',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<font color=#606060>&gt; А кэш, типа, не разновидность памяти.</font>
+<p>нолями его не забивают а выполняют инвалидацию
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+</td></tr></table>
+
+
+<a name="14"></a><table class=cblk id="msgshow_14"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#14"><font color="#606060">3.14</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Номер первого сообщения'>12</span>), 12:59, 27/10/2023 [<a href=#5 title='к родителю'>^</a>] [<a href=#3 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=14&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698393543,'Аноним','vsluhforumID3', 131905, 14)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_14" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_14',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_14',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Даже безопастные язычки таким не занимаются.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+</td></tr></table>
+
+</div>
+<br><div id="infoblock_4"></div>
+<a name="4"></a><table class=cblk id="msgshow_4"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#4"><font color="#606060">1.4</font></a>, <a href="/~YetAnotherOnanym" class="nick">YetAnotherOnanym</a> (<span title='Авторизован'>ok</span>), 12:36, 27/10/2023  [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=4&news_key=60000" rel="nofollow">ответить</a>] [<a href="/openforum/vsluhforumID3/131905.html#4" onClick="return open_comments(131905,3,4);" title="Показать все нераскрытые сообщения в подветке">&#65122;&#65122;&#65122;</a>] [<a href="#" onClick="return collapse_comments(131905,4,3,4);" title="Свернуть ветку">&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;</a>] &nbsp;<script>s_n_a2(1698392178,'YetAnotherOnanym','vsluhforumID3', 131905, 4)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_4" class=vt_d2><span class=vt_mm title="всего: +3/-4">&ndash;1</span> <a href="#" onClick="return o_vote('2_3_131905_4',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_4',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 style="border-left:3px solid #C9CAB6;">
+<a href="/~YetAnotherOnanym"><img src="/avatar/e76ba89a5ed1bc4c42f914f1210fb028.jpg" width=40 height=40 border=0 align=right></a><font color=#606060>&gt; использован трюк с открытием исследуемой чужой страницы во всплывающем окне при помощи JavaScript-метода window.open(). В этом случае сайт открывался не в отдельном процессе, а в одном процессе с кодом атакующего.</font>
+<p>О, сколько нам открытий чудных готовит анализ исходников интерпретатора жабаскрипта.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+<div id=actshow_0_4>
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="72"></a><table class=cblk id="msgshow_72"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#72"><font color="#606060">2.72</font></a>, <a href="/~%E1%CE%CF%CE%D8%C9%CD%DF" class="nick">Аноньимъ</a> (<span title='Авторизован'>ok</span>), 16:09, 27/10/2023 [<a href=#4 title='к родителю'>^</a>] [<a href=#4 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=72&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698404993,'Аноньимъ','vsluhforumID3', 131905, 72)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_72" class=vt_d2><span class=vt_pp title="всего: +2/-1">+1</span> <a href="#" onClick="return o_vote('2_3_131905_72',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_72',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<a href="/~%E1%CE%CF%CE%D8%C9%CD%DF"><img src="/avatar/60ccefc97425a2394f0f8a097ec289f6.jpg" width=40 height=40 border=0 align=right></a><font color=#606060>&gt; открытием исследуемой чужой страницы во всплывающем окне при помощи JavaScript-метода window.open()</font>
+<p>Это не интерпретатора проблема. А бездумного мерзкого дизайна позволяющего вообще такое делать. Открывать всплывающие окна, да ещё со сторонними сайтами внутри, мрак и мерзость.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+
+<a name="117"></a><table class=cblk id="msgshow_117"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#117"><font color="#606060">2.117</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Через анонимайзер'>-</span>), 20:33, 27/10/2023 [<a href=#4 title='к родителю'>^</a>] [<a href=#4 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=117&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698420819,'Аноним','vsluhforumID3', 131905, 117)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_117" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_117',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_117',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<font color=#606060>&gt; О, сколько нам открытий чудных готовит анализ исходников интерпретатора жабаскрипта.</font>
+<p>Идея запускать ремотно чужой код вообще гарантирует много интересных открытий.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+
+</div>
+<br><div id="infoblock_5"></div>
+<a name="15"></a><table class=cblk id="msgshow_15"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#15"><font color="#606060">1.15</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Номер первого сообщения'>12</span>), 13:01, 27/10/2023  [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=15&news_key=60000" rel="nofollow">ответить</a>] [<a href="/openforum/vsluhforumID3/131905.html#15" onClick="return open_comments(131905,3,5);" title="Показать все нераскрытые сообщения в подветке">&#65122;&#65122;&#65122;</a>] [<a href="#" onClick="return collapse_comments(131905,15,3,5);" title="Свернуть ветку">&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;</a>] &nbsp;<script>s_n_a2(1698393705,'Аноним','vsluhforumID3', 131905, 15)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_15" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_15',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_15',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 style="border-left:3px solid #C9CAB6;">
+В госах в РФ эпл запретили в Китае тоже. В яблоке таких приколов как сабж на много лет припасено.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+<div id=actshow_0_5>
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="16"></a><table class=cblk id="msgshow_16"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#16"><font color="#606060">2.16</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Номер первого сообщения'>11</span>), 13:03, 27/10/2023 [<a href=#15 title='к родителю'>^</a>] [<a href=#15 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=16&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698393799,'Аноним','vsluhforumID3', 131905, 16)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_16" class=vt_d2><span class=vt_pp title="всего: +1/-0">+1</span> <a href="#" onClick="return o_vote('2_3_131905_16',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_16',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+проприетарное значит безопасное
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="75"></a><table class=cblk id="msgshow_75"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#75"><font color="#606060">3.75</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Номер первого сообщения'>10</span>), 16:17, 27/10/2023 [<a href=#16 title='к родителю'>^</a>] [<a href=#15 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=75&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698405443,'Аноним','vsluhforumID3', 131905, 75)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_75" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_75',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_75',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Это же если отечественное, то да.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="91"></a><table class=cblk id="msgshow_91"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#91"><font color="#606060">4.91</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>91</span>), 17:10, 27/10/2023 [<a href=#75 title='к родителю'>^</a>] [<a href=#15 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=91&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698408615,'Аноним','vsluhforumID3', 131905, 91)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_91" class=vt_d2><span class=vt_pp title="всего: +2/-0">+2</span> <a href="#" onClick="return o_vote('2_3_131905_91',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_91',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Одно движение клеевого пистолета, и что угодно превращается в отечественное.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+</td></tr></table>
+
+
+<a name="22"></a><table class=cblk id="msgshow_22"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#22"><font color="#606060">2.22</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>22</span>), 13:10, 27/10/2023 [<a href=#15 title='к родителю'>^</a>] [<a href=#15 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=22&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698394240,'Аноним','vsluhforumID3', 131905, 22)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_22" class=vt_d2><span class=vt_pp title="всего: +4/-0">+4</span> <a href="#" onClick="return o_vote('2_3_131905_22',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_22',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<font color=#606060>&gt;в Китае тоже</font>
+<p><a href="https://opennet.ru/58613-realme" rel="nofollow">https://opennet.ru/58613-realme</a>
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="49"></a><table class=cblk id="msgshow_49"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#49"><font color="#606060">3.49</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>49</span>), 14:05, 27/10/2023 [<a href=#22 title='к родителю'>^</a>] [<a href=#15 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=49&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698397528,'Аноним','vsluhforumID3', 131905, 49)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_49" class=vt_d2><span class=vt_mm title="всего: +0/-2">&ndash;2</span> <a href="#" onClick="return o_vote('2_3_131905_49',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_49',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<font color=#606060>&gt;realme</font>
+<p>Звучит как бренд порностудии.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+</td></tr></table>
+
+</div>
+<br><div id="infoblock_6"></div>
+<a name="23"></a><table class=cblk id="msgshow_23"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#23"><font color="#606060">1.23</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>23</span>), 13:14, 27/10/2023  [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=23&news_key=60000" rel="nofollow">ответить</a>] [<a href="/openforum/vsluhforumID3/131905.html#23" onClick="return open_comments(131905,3,6);" title="Показать все нераскрытые сообщения в подветке">&#65122;&#65122;&#65122;</a>] [<a href="#" onClick="return collapse_comments(131905,23,3,6);" title="Свернуть ветку">&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;</a>] &nbsp;<script>s_n_a2(1698394495,'Аноним','vsluhforumID3', 131905, 23)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_23" class=vt_d2><span class=vt_pp title="всего: +4/-0">+4</span> <a href="#" onClick="return o_vote('2_3_131905_23',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_23',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 style="border-left:3px solid #C9CAB6;">
+почему бы просто не запретить процессору записывать данные в кэш?
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+<div id=actshow_0_6>
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="27"></a><table class=cblk id="msgshow_27"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#27"><font color="#606060">2.27</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Номер первого сообщения'>12</span>), 13:17, 27/10/2023 [<a href=#23 title='к родителю'>^</a>] [<a href=#23 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=27&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698394666,'Аноним','vsluhforumID3', 131905, 27)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_27" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_27',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_27',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Вот вот хорошее решение сразу телефон в мусорку и безопасно.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="47"></a><table class=cblk id="msgshow_47"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#47"><font color="#606060">3.47</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>47</span>), 14:04, 27/10/2023 [<a href=#27 title='к родителю'>^</a>] [<a href=#23 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=47&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698397493,'Аноним','vsluhforumID3', 131905, 47)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_47" class=vt_d2><span class=vt_pp title="всего: +2/-0">+2</span> <a href="#" onClick="return o_vote('2_3_131905_47',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_47',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Ну, может, хоть после этого программисты научатся работать.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="80"></a><table class=cblk id="msgshow_80"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#80"><font color="#606060">4.80</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>80</span>), 16:30, 27/10/2023 [<a href=#47 title='к родителю'>^</a>] [<a href=#23 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=80&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698406239,'Аноним','vsluhforumID3', 131905, 80)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_80" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_80',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_80',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+этого не будет никогда
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+</td></tr></table>
+
+
+<a name="30"></a><table class=cblk id="msgshow_30"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#30"><font color="#606060">2.30</font></a>, <a href="/~%ED%C1%D3%D3%CF%CE%D9%20%F2%C5%D0%D4%C9%CC%CF%C9%C4%D9" class="nick">Массоны Рептилоиды</a> (<span title='Ник без авторизации'>?</span>), 13:24, 27/10/2023 [<a href=#23 title='к родителю'>^</a>] [<a href=#23 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=30&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698395097,'Массоны Рептилоиды','vsluhforumID3', 131905, 30)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_30" class=vt_d2><span class=vt_pp title="всего: +4/-0">+4</span> <a href="#" onClick="return o_vote('2_3_131905_30',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_30',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<font color=#606060>&gt; почему бы просто не запретить процессору записывать данные в кэш?</font>
+<p>Премию Тьюринга этому Анониму!
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="136"></a><table class=cblk id="msgshow_136"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#136"><font color="#606060">3.136</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>136</span>), 14:50, 28/10/2023 [<a href=#30 title='к родителю'>^</a>] [<a href=#23 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=136&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698486659,'Аноним','vsluhforumID3', 131905, 136)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_136" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_136',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_136',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+И Дарвина заодно.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+
+
+<a name="60"></a><table class=cblk id="msgshow_60"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#60"><font color="#606060">2.60</font></a>, <a href="/~Sw00p%20aka%20Jerom" class="nick">Sw00p aka Jerom</a> (<span title='Ник без авторизации'>?</span>), 14:49, 27/10/2023 [<a href=#23 title='к родителю'>^</a>] [<a href=#23 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=60&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698400145,'Sw00p aka Jerom','vsluhforumID3', 131905, 60)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_60" class=vt_d2><span class=vt_pp title="всего: +1/-0">+1</span> <a href="#" onClick="return o_vote('2_3_131905_60',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_60',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+для начала нужно жабускрипт выпилить из браузера
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="70"></a><table class=cblk id="msgshow_70"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#70"><font color="#606060">3.70</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Номер первого сообщения'>12</span>), 15:48, 27/10/2023 [<a href=#60 title='к родителю'>^</a>] [<a href=#23 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=70&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698403712,'Аноним','vsluhforumID3', 131905, 70)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_70" class=vt_d2><span class=vt_pp title="всего: +1/-0">+1</span> <a href="#" onClick="return o_vote('2_3_131905_70',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_70',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Нужен новый безопастный безджаваскриптовый интернет.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="73"></a><table class=cblk id="msgshow_73"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#73"><font color="#606060">4.73</font></a>, <a href="/~%E1%CE%CF%CE%D8%C9%CD%DF" class="nick">Аноньимъ</a> (<span title='Авторизован'>ok</span>), 16:11, 27/10/2023 [<a href=#70 title='к родителю'>^</a>] [<a href=#23 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=73&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698405079,'Аноньимъ','vsluhforumID3', 131905, 73)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_73" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_73',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_73',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<a href="/~%E1%CE%CF%CE%D8%C9%CD%DF"><img src="/avatar/60ccefc97425a2394f0f8a097ec289f6.jpg" width=40 height=40 border=0 align=right></a>Лисп же. Гипертекстовый лисповый schemanet.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="115"></a><table class=cblk id="msgshow_115"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#115"><font color="#606060">5.115</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Номер первого сообщения'>31</span>), 20:27, 27/10/2023 [<a href=#73 title='к родителю'>^</a>] [<a href=#23 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=115&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698420435,'Аноним','vsluhforumID3', 131905, 115)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_115" class=vt_d2><span class=vt_pp title="всего: +3/-0">+3</span> <a href="#" onClick="return o_vote('2_3_131905_115',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_115',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<font color=#606060>&gt; Лисп же. Гипертекстовый лисповый schemanet.</font>
+<p>Боюсь, что с современными &quot;разработчиками&quot; мы получим в итоге schemalenet.
+<p></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+
+
+<a name="85"></a><table class=cblk id="msgshow_85"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#85"><font color="#606060">4.85</font></a>, <a href="/~Sw00p%20aka%20Jerom" class="nick">Sw00p aka Jerom</a> (<span title='Ник без авторизации'>?</span>), 17:00, 27/10/2023 [<a href=#70 title='к родителю'>^</a>] [<a href=#23 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=85&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698408012,'Sw00p aka Jerom','vsluhforumID3', 131905, 85)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_85" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_85',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_85',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<font color=#606060>&gt; Нужен новый безопастный безджаваскриптовый интернет.</font>
+<p>а как иначе? сайдченнел атаки всегда будут, пока есть возможность исполнять чужой не контроллируемый код на том же цпу где исполняется код системы и прочих &quot;трастовых&quot; програм. Даже архитектура аля &quot;куб ос&quot; не спасет.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+</td></tr></table>
+
+
+<a name="77"></a><table class=cblk id="msgshow_77"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#77"><font color="#606060">2.77</font></a>, <a href="/~Tron%20is%20Whistling" class="nick">Tron is Whistling</a> (<span title='Ник без авторизации'>?</span>), 16:20, 27/10/2023 [<a href=#23 title='к родителю'>^</a>] [<a href=#23 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=77&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698405651,'Tron is Whistling','vsluhforumID3', 131905, 77)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_77" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_77',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_77',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Write-through? Было уже. Не взлетело, потому что обычно то, что записано, сразу же назад читается, и получаются аж две операции доступа к памяти.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="78"></a><table class=cblk id="msgshow_78"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#78"><font color="#606060">3.78</font></a>, <a href="/~Tron%20is%20Whistling" class="nick">Tron is Whistling</a> (<span title='Ник без авторизации'>?</span>), 16:21, 27/10/2023 [<a href=#77 title='к родителю'>^</a>] [<a href=#23 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=78&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698405700,'Tron is Whistling','vsluhforumID3', 131905, 78)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_78" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_78',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_78',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Тьфу, не write-through, write-bypass.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+
+
+<a name="89"></a><table class=cblk id="msgshow_89"><tr><td class=chdr><li><font color="#606060">2.89</font>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Через анонимайзер'>-</span>), 17:08, 27/10/2023 <a href="#" onclick="do_show_thread0(131905,89,3); return false;" style="color: #606060;">Скрыто ботом-модератором</a>  &nbsp;&nbsp;&nbsp;&nbsp;[<a href="/cgi-bin/openforum/vsluhboard.cgi?az=to_moderator&forum=vsluhforumID3&om=131905&omm=89" rel="nofollow">к&nbsp;модератору</a>]</td><td class=chdr2><span id="vt_2_3_131905_89" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_89',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_89',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt style="font-size: 90%; color: #606060" id=t131905_89><div id=thd131905_89></div></td></tr><tr><td>&nbsp;</td></tr></table>
+
+
+<a name="113"></a><table class=cblk id="msgshow_113"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#113"><font color="#606060">2.113</font></a>, <a href="/~AKTEON" class="nick">AKTEON</a> (<span title='Ник без авторизации'>?</span>), 20:07, 27/10/2023 [<a href=#23 title='к родителю'>^</a>] [<a href=#23 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=113&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698419252,'AKTEON','vsluhforumID3', 131905, 113)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_113" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_113',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_113',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Мы уже джва года предлагали выпустить процессор со специальными ядрами для браузера - без&nbsp;&nbsp;спекулятивного выполнения вообще,хе-хе
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+
+</div>
+<br><div id="infoblock_7"></div>
+<a name="29"></a><table class=cblk id="msgshow_29"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#29"><font color="#606060">1.29</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>29</span>), 13:22, 27/10/2023  [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=29&news_key=60000" rel="nofollow">ответить</a>] [<a href="/openforum/vsluhforumID3/131905.html#29" onClick="return open_comments(131905,3,7);" title="Показать все нераскрытые сообщения в подветке">&#65122;&#65122;&#65122;</a>] [<a href="#" onClick="return collapse_comments(131905,29,3,7);" title="Свернуть ветку">&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;</a>] &nbsp;<script>s_n_a2(1698394964,'Аноним','vsluhforumID3', 131905, 29)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_29" class=vt_d2><span class=vt_pp title="всего: +7/-2">+5</span> <a href="#" onClick="return o_vote('2_3_131905_29',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_29',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 style="border-left:3px solid #C9CAB6;">
+60000 статья на сайте, красивое
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+<div id=actshow_0_7>
+
+</div>
+<div id="infoblock_8"></div>
+<a name="36"></a><table class=cblk id="msgshow_36"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#36"><font color="#606060">1.36</font></a>, <a href="/~InuYasha" class="nick">InuYasha</a> (<span title='Ник без авторизации'>??</span>), 13:51, 27/10/2023  [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=36&news_key=60000" rel="nofollow">ответить</a>] [<a href="/openforum/vsluhforumID3/131905.html#36" onClick="return open_comments(131905,3,8);" title="Показать все нераскрытые сообщения в подветке">&#65122;&#65122;&#65122;</a>] [<a href="#" onClick="return collapse_comments(131905,36,3,8);" title="Свернуть ветку">&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;</a>] &nbsp;<script>s_n_a2(1698396696,'InuYasha','vsluhforumID3', 131905, 36)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_36" class=vt_d2><span class=vt_pp title="всего: +3/-2">+1</span> <a href="#" onClick="return o_vote('2_3_131905_36',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_36',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 style="border-left:3px solid #C9CAB6;">
+Спасибо тому кто сохранил для этой новости ID 60000. :)
+<br>Просто муа - belissimo!
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+<div id=actshow_0_8>
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="65"></a><table class=cblk id="msgshow_65"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#65"><font color="#606060">2.65</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Номер первого сообщения'>12</span>), 14:56, 27/10/2023 [<a href=#36 title='к родителю'>^</a>] [<a href=#36 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=65&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698400580,'Аноним','vsluhforumID3', 131905, 65)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_65" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_65',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_65',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Эпл выкупило айдишник?
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="71"></a><table class=cblk id="msgshow_71"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#71"><font color="#606060">3.71</font></a>, <a href="/~Anononononon" class="nick">Anononononon</a> (<span title='Ник без авторизации'>?</span>), 15:59, 27/10/2023 [<a href=#65 title='к родителю'>^</a>] [<a href=#36 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=71&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698404395,'Anononononon','vsluhforumID3', 131905, 71)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_71" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_71',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_71',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Таки вставило зонд кому-надо
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+</td></tr></table>
+
+</div>
+<br><div id="infoblock_9"></div>
+<a name="76"></a><table class=cblk id="msgshow_76"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#76"><font color="#606060">1.76</font></a>, <a href="/~Tron%20is%20Whistling" class="nick">Tron is Whistling</a> (<span title='Ник без авторизации'>?</span>), 16:19, 27/10/2023  [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=76&news_key=60000" rel="nofollow">ответить</a>] [<a href="/openforum/vsluhforumID3/131905.html#76" onClick="return open_comments(131905,3,9);" title="Показать все нераскрытые сообщения в подветке">&#65122;&#65122;&#65122;</a>] [<a href="#" onClick="return collapse_comments(131905,76,3,9);" title="Свернуть ветку">&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;</a>] &nbsp;<script>s_n_a2(1698405575,'Tron is Whistling','vsluhforumID3', 131905, 76)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_76" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_76',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_76',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 style="border-left:3px solid #C9CAB6;">
+Кстати да, вот где возможности тайминг-атак приближены к лабораторным - так это на яббле. Железо в пределах каждой линейки (коих мало) - одинаковое, набор софта одинаков, да ещё и всё &quot;лишнее&quot; гасится, чтобы кислый арм продолжал казаться экономичным.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+<div id=actshow_0_9>
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="93"></a><table class=cblk id="msgshow_93"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#93"><font color="#606060">2.93</font></a>, <a href="/~%E8%C1%CD%C1%D3%CF%D7%20%EB%D3%C9%D2%20%E8%C1%DA%C2%CF%CC%CC%C1%D4%CF%D7%C9%DE" class="nick">Хамасов Ксир Хазболлатович</a> (<span title='Ник без авторизации'>?</span>), 17:15, 27/10/2023 [<a href=#76 title='к родителю'>^</a>] [<a href=#76 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=93&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698408947,'Хамасов Ксир Хазболлатович','vsluhforumID3', 131905, 93)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_93" class=vt_d2><span class=vt_pp title="всего: +2/-1">+1</span> <a href="#" onClick="return o_vote('2_3_131905_93',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_93',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Вообще вся эта экономичность обыкновенный маркетинг. Учитывая что большую часть времени ноут стоит на столе и подключен к резетке. 
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="142"></a><table class=cblk id="msgshow_142"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#142"><font color="#606060">3.142</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Номер первого сообщения'>141</span>), 18:57, 28/10/2023 [<a href=#93 title='к родителю'>^</a>] [<a href=#76 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=142&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698501478,'Аноним','vsluhforumID3', 131905, 142)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_142" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_142',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_142',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+У вас он стоит на столе*
+<br>И думаю, не в последнюю очередь из-за того, что заряда хватает часа на 4-5 от силы. 
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+
+
+<a name="125"></a><table class=cblk id="msgshow_125"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#125"><font color="#606060">2.125</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Номер первого сообщения'>124</span>), 02:37, 28/10/2023 [<a href=#76 title='к родителю'>^</a>] [<a href=#76 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=125&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698442626,'Аноним','vsluhforumID3', 131905, 125)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_125" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_125',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_125',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Да то ж самое можно устроить андервольтом. 12900к максимум в нагрузке самой тяжкой жрет 162 - 164 ватта под воздушным кулером без супер термопасты.
+<br>Чуть сбавить частоты и будет примитивный ноутопроц которому вольтаж никто не настраивал.
+<br>И он будет быстрее того же ультра М1,2,3 потому что игори любят видеокарты и память в основном.
+<br>Яблочники просто не смогли выжать больше из камней. И потенциала с андервольтом/разгоному яблока нет.
+<br>Поэтому интеловцы и говорят об отсутствии перспектив у ARM созданных для экономии.
+<br>Они вломили мегатонны денег с искуственным интеллектом, а толку ноль.
+<br> ARM - тупиковая нишевая поделка.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="135"></a><table class=cblk id="msgshow_135"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#135"><font color="#606060">3.135</font></a>, <a href="/~Tron%20is%20Whistling" class="nick">Tron is Whistling</a> (<span title='Ник без авторизации'>?</span>), 10:06, 28/10/2023 [<a href=#125 title='к родителю'>^</a>] [<a href=#76 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=135&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698469577,'Tron is Whistling','vsluhforumID3', 131905, 135)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_135" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_135',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_135',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Андервольтом не можно, но в целом идея правильная.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+
+<a name="143"></a><table class=cblk id="msgshow_143"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#143"><font color="#606060">3.143</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Номер первого сообщения'>141</span>), 19:00, 28/10/2023 [<a href=#125 title='к родителю'>^</a>] [<a href=#76 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=143&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698501647,'Аноним','vsluhforumID3', 131905, 143)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_143" class=vt_d2><span class=vt_pp title="всего: +1/-0">+1</span> <a href="#" onClick="return o_vote('2_3_131905_143',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_143',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Арм настолько бесполезная поделка, что настольные процессоры на них собираются пилить: квалком, нвидия, амд, хуавей и самсунг. 
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="153"></a><table class=cblk id="msgshow_153"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#153"><font color="#00A000"><b>4.153</b></font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Через анонимайзер'>-</span>), 21:23, 30/10/2023 [<a href=#143 title='к родителю'>^</a>] [<a href=#76 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=153&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698682989,'Аноним','vsluhforumID3', 131905, 153)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_153" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_153',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_153',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Если бы у них был выбор, то уже давно купили бы лиценизию на x86
+<br>А так довольствуются тем, что появилоась в наличии
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+
+
+<a name="146"></a><table class=cblk id="msgshow_146"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#146"><font color="#606060">3.146</font></a>, <a href="/~%E4%C5%CE%C9%D3%20%F0%CF%D0%CF%D7" class="nick">Денис Попов</a> (<span title='Ник без авторизации'>?</span>), 23:01, 28/10/2023 [<a href=#125 title='к родителю'>^</a>] [<a href=#76 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=146&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698516063,'Денис Попов','vsluhforumID3', 131905, 146)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_146" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_146',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_146',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+<font color=#606060>&gt;Да то ж самое можно устроить андервольтом.</font>
+<p>Стесняюсь спросить: почему до сих пор не сделано?
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+</td></tr></table>
+
+</div>
+<br><div id="infoblock_10"></div>
+<a name="104"></a><table class=cblk id="msgshow_104"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#104"><font color="#606060">1.104</font></a>, <a href="/~%CC%C0%D4%D9%CA%20%C1%D2%DE%C5%DB%CB%CF%CC%D8%CE%C9%CB..." class="nick">лютый арчешкольник...</a> (<span title='Ник без авторизации'>?</span>), 18:23, 27/10/2023  [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=104&news_key=60000" rel="nofollow">ответить</a>] [<a href="/openforum/vsluhforumID3/131905.html#104" onClick="return open_comments(131905,3,10);" title="Показать все нераскрытые сообщения в подветке">&#65122;&#65122;&#65122;</a>] [<a href="#" onClick="return collapse_comments(131905,104,3,10);" title="Свернуть ветку">&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;</a>] &nbsp;<script>s_n_a2(1698413036,'лютый арчешкольник...','vsluhforumID3', 131905, 104)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_104" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_104',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_104',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 style="border-left:3px solid #C9CAB6;">
+У меня три учётки для браузера. юзер приватный, юзер помоешный и юзер текущий (где звук нужен). шах и мат, какиры. даже фиксы можно не ставить ) 
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+<div id=actshow_0_10>
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="151"></a><table class=cblk id="msgshow_151"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#151"><font color="#00A000"><b>2.151</b></font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>151</span>), 19:53, 29/10/2023 [<a href=#104 title='к родителю'>^</a>] [<a href=#104 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=151&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698591223,'Аноним','vsluhforumID3', 131905, 151)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_151" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_151',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_151',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Вот если бы у тебя было три разных физических компа, загружаемых с Tails, каждый со своим независимым выходом в сеть через своего провайдера - вот это было бы дело. А так - паллиативная гомеопатия какая-то. 
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+
+</div>
+<br><div id="infoblock_11"></div>
+<a name="112"></a><table class=cblk id="msgshow_112"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#112"><font color="#606060">1.112</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>112</span>), 19:54, 27/10/2023  [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=112&news_key=60000" rel="nofollow">ответить</a>] [<a href="/openforum/vsluhforumID3/131905.html#112" onClick="return open_comments(131905,3,11);" title="Показать все нераскрытые сообщения в подветке">&#65122;&#65122;&#65122;</a>] [<a href="#" onClick="return collapse_comments(131905,112,3,11);" title="Свернуть ветку">&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;</a>] &nbsp;<script>s_n_a2(1698418499,'Аноним','vsluhforumID3', 131905, 112)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_112" class=vt_d2><span class=vt_pp title="всего: +4/-0">+4</span> <a href="#" onClick="return o_vote('2_3_131905_112',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_112',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 style="border-left:3px solid #C9CAB6;">
+самое смешное - своим тупым запретом на сторонние веб-движки на iOS они сделали уязвимыми все браузеры сразу
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+<div id=actshow_0_11>
+
+</div>
+<div id="infoblock_12"></div>
+<a name="120"></a><table class=cblk id="msgshow_120"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#120"><font color="#606060">1.120</font></a>, <a href="/~pavlinux" class="nick">pavlinux</a> (<span title='Авторизован'>ok</span>), 23:09, 27/10/2023  [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=120&news_key=60000" rel="nofollow">ответить</a>] [<a href="/openforum/vsluhforumID3/131905.html#120" onClick="return open_comments(131905,3,12);" title="Показать все нераскрытые сообщения в подветке">&#65122;&#65122;&#65122;</a>] [<a href="#" onClick="return collapse_comments(131905,120,3,12);" title="Свернуть ветку">&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;</a>] &nbsp;<script>s_n_a2(1698430197,'pavlinux','vsluhforumID3', 131905, 120)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_120" class=vt_d2><span class=vt_mm title="всего: +0/-1">&ndash;1</span> <a href="#" onClick="return o_vote('2_3_131905_120',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_120',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 style="border-left:3px solid #C9CAB6;">
+<a href="/~pavlinux"><img src="/avatar/d7f4df2ccb122a1ebc0ed2f88f95913a.jpg" width=40 height=40 border=0 align=right></a><font color=#606060>&gt;&nbsp;&nbsp;определения текста письма, открытого во вкладке с Gmail, </font>
+<br><font color=#606060>&gt; просмотра истории YouTube и извлечения пароля, </font>
+<br><font color=#606060>&gt; подставленного менеджером паролей LastPass в форму входа в Instagram</font>
+<p>Страх-то какой :D 
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+<div id=actshow_0_12>
+
+</div>
+<div id="infoblock_13"></div>
+<a name="126"></a><table class=cblk id="msgshow_126"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#126"><font color="#606060">1.126</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>126</span>), 04:00, 28/10/2023  [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=126&news_key=60000" rel="nofollow">ответить</a>] [<a href="/openforum/vsluhforumID3/131905.html#126" onClick="return open_comments(131905,3,13);" title="Показать все нераскрытые сообщения в подветке">&#65122;&#65122;&#65122;</a>] [<a href="#" onClick="return collapse_comments(131905,126,3,13);" title="Свернуть ветку">&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;</a>] &nbsp;<script>s_n_a2(1698447617,'Аноним','vsluhforumID3', 131905, 126)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_126" class=vt_d2><span class=vt_mm title="всего: +0/-1">&ndash;1</span> <a href="#" onClick="return o_vote('2_3_131905_126',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_126',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 style="border-left:3px solid #C9CAB6;">
+Какое счастье, что мой браузер на движке wget в консоли.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+<div id=actshow_0_13>
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="137"></a><table class=cblk id="msgshow_137"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#137"><font color="#606060">2.137</font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Номер первого сообщения'>136</span>), 14:54, 28/10/2023 [<a href=#126 title='к родителю'>^</a>] [<a href=#126 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=137&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698486858,'Аноним','vsluhforumID3', 131905, 137)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_137" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_137',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_137',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Ричард Столлман читает Опеннет!
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+
+
+<a name="152"></a><table class=cblk id="msgshow_152"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#152"><font color="#00A000"><b>2.152</b></font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Номер первого сообщения'>151</span>), 19:55, 29/10/2023 [<a href=#126 title='к родителю'>^</a>] [<a href=#126 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=152&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1698591339,'Аноним','vsluhforumID3', 131905, 152)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_152" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_152',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_152',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Не ври. Чтоб тут писать, нужен как минимум curl. 
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+
+</div>
+<br><div id="infoblock_14"></div>
+<a name="150"></a><table class=cblk id="msgshow_150"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#150"><font color="#00A000"><b>1.150</b></font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>150</span>), 13:30, 29/10/2023  [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=150&news_key=60000" rel="nofollow">ответить</a>] [<a href="/openforum/vsluhforumID3/131905.html#150" onClick="return open_comments(131905,3,14);" title="Показать все нераскрытые сообщения в подветке">&#65122;&#65122;&#65122;</a>] [<a href="#" onClick="return collapse_comments(131905,150,3,14);" title="Свернуть ветку">&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;</a>] &nbsp;<script>s_n_a2(1698568224,'Аноним','vsluhforumID3', 131905, 150)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_150" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_150',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_150',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 style="border-left:3px solid #C9CAB6;">
+<font color=#606060>&gt;Так как тип объекта не соответствует типу обрабатываемого массива</font>
+<p>Вот, кто ещё попробует говорить, что javascript зачёркнуто безтиповые языки это круто, буду тыкать носом в такие уязвимости. Ибо если в Цэ таки можно написать безопасный код, то тут нет, от слова совсем.
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+<div id=actshow_0_14>
+
+<table class=cblk><tr><td width="3%" class=line>&nbsp;</td><td width="97%">
+
+<a name="154"></a><table class=cblk id="msgshow_154"><tr><td class=chdr><li><a href="/openforum/vsluhforumID3/131905.html#154"><font color="#00A000"><b>2.154</b></font></a>, <a href="/~%E1%CE%CF%CE%C9%CD" class="nick">Аноним</a> (<span title='Первое сообщение'>154</span>), 13:56, 26/11/2023 [<a href=#150 title='к родителю'>^</a>] [<a href=#150 title='на 1 уровень'>^^</a>] [<a href=#lenta_nav title='вверх'>^^^</a>] [<a href="/cgi-bin/openforum/vsluhboard.cgi?az=post&om=131905&forum=vsluhforumID3&omm=154&news_key=60000" rel="nofollow">ответить</a>] &nbsp;<script>s_n_a2(1700988999,'Аноним','vsluhforumID3', 131905, 154)</script>
+</td><td class=chdr2><span id="vt_2_3_131905_154" class=vt_d2><a href="#" onClick="return o_vote('2_3_131905_154',1);" title="Полезно, одобряю"><span class=vt_p>+</span></a>/<a href="#" onClick="return o_vote('2_3_131905_154',-1);" title="Мусорный комментарий"><span class=vt_m>&ndash;</span></a></span></td></tr><tr><td class=ctxt colspan=2 >
+Ничего, что там прямым текстом написано, что в обычных условиях такой код падает и можно его выполнить из-за косяка в проце, что в принципе да&#235;т возможность и на другом языке похожее провернуть. Ну и да, щас бы безопасность си с жс. С си, у которого каждая вторая ошибка - работа с памятью и который слил бесч&#235;тное кол-во байт налево. 
+<br></td></tr><tr><td colspan=2>&nbsp;</td></tr></table>
+
+</td></tr></table>
+</div>
+
+<script language="JavaScript">
+var hidden_msg = new Array(0,56,38,41,99,57,106,121,127,131,89); 
+var hidden_idx = new Array(0,1,10,10,10,10,10,11,11,11,11,11,11,11,11,11); 
+var idx_level1_list = {131905: [1,2,3,4,15,23,29,36,76,104,112,120,126,150]}; 
+if (text_type == 1){ open_block(131905,3,hidden_msg,1);}
+</script>
+
+<br><div style="width: 100%; text-align: right; font-size: 70%;"><a href="//www.opennet.ru/openforum/vsluhforumID4/588.html">игнорирование участников</a> | <a href="//www.opennet.ru/cgi-bin/openforum/vsluhboard.cgi?az=list&forum=vsluhforumID3&open=moderator&om=131905" rel="nofollow">лог модерирования</a></div>
+</td></tr>
+</table>
+<table class="thdr">
+<tr><td><b>&nbsp;Добавить комментарий</b></td></tr>
+</table>
+<table class="ttxt2">
+<tr><td>
+</form>
+<form method="post" action="/cgi-bin/openforum/vsluhboard.cgi" name="comment">
+<input type=hidden name="om"  value="131905">
+<input type=hidden name="news_key" value="60000">
+<input type=hidden name="forum" value="vsluhforumID3">
+<input type=hidden name="omm" value="">
+<input type=hidden name="az" value="a_mesg">
+<input type=hidden name="subject" value="iLeakage - метод эксплуатации уязвимости в CPU Apple через б...">
+<table>
+<tr><td style="text-align: right;">Имя: <input type=text name="name" value="" size=25></td></tr>
+<tr><td style="text-align: right;">E-Mail: <input type=text name="email" value="" size=25 title="Не обязательное поле. Для отправки ответов следует указать перед адресом знак '!' или '!!' для скрытия адреса"></td></tr>
+</table>
+
+</td></tr><tr><td>
+
+<table>
+<tr><td>
+Текст:<br><textarea name="body" COLS=38 ROWS=8 WRAP="virtual" onClick="TxtResize(this)" style="width:90%;max-width:800;"></textarea>
+</table>
+
+<!-- INPUT TYPE="SUBMIT" NAME="preview" VALUE="Посмотреть" -->
+<INPUT TYPE="SUBMIT" NAME="post" VALUE="Отправить">
+</form>
+<script>setup_nick();</script>
+</td></tr>
+</table>
+<div id="lenta_nav2"></div>
+<meta property="og:description" content="Исследователи из Технологического института Джорджии, Мичиганского университета и Рурского университета  разработали  технику атаки  iLeakage , позволяющую эксплуатировать  уязвимость в ARM-процессорах Apple серий 'A' и 'M' через открытие в браузере специально оформленной страницы. Подготовленные исследователями прототипы эксплоитов позволяют при запуске JavaScript-кода в браузере узнать содержимое сайтов, открытых в других вкладках, например, продемонстрирована возможность  определения  текста письма, открытого во вкладке с Gmail,  просмотра  истории  YouTube и  извлечения  пароля, подставленного менеджером паролей LastPass в форму входа в Instagram. Атака применима к браузеру Safari на системах с macOS и любым браузерам на платформе iOS (правила Apple предписывают во всех браузерах для iOS использовать только системный движок WebKit, общий с Safari)">
+<table>
+</table>
+
+    <!-- сводные новости. конец -->
+
+
+<script>load_topnews(1);</script>
+</div>
+<!--htdig_noindex-->
+<div class=r_col id=as1>
+<aside>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td align=right>
+<script>load_topnews(2);</script>
+
+<table class=thdr>
+<tr><td>Памятные даты</td></tr>
+</table>
+<table class=tlist>
+<tr><td>23 декабря <a href="/openssl">OpenSSL</a>  исполнилось 27 лет
+</table>
+<br>
+
+
+	<!-- быстрый переход. начало -->
+	<center>
+
+</center>
+
+<table class=thdr>
+<tr><td>Навигация</td></tr>
+</table>
+<table class=ttxt>
+<tr><td>
+<form method="get" action="https://www.opennet.ru/cgi-bin/opennet/jump.cgi">
+    &nbsp;<select name="to" onChange="submit()" style="font-size: 10pt; width: 170; background-color: #E9EAD6; color: #0000AD;">
+    <option value="">Фильтры
+    <option value="/opennews/index.shtml?f=review2">События
+    <option value="/opennews/index.shtml?f=arts">Обзоры и статьи
+    <option value="/opennews/index.shtml?f=prog">Программы
+    <option value="/opennews/index.shtml?f=vuln">Уязвимости
+    <option value="/opennews/index.shtml?f=bsd">Исключить Linux
+    <option value="/opennews/index.shtml?f=linux">Исключить BSD
+    <option value="/opennews/index.shtml?f=rust">Исключить Rust
+    <option value="">----- Формат вывода
+    <option value="/opennews/index.shtml?full_lines=10&lines=10&mid_lines=00">10 полных
+    <option value="/opennews/index.shtml?full_lines=00&lines=20&mid_lines=20">20 сокращенных
+    <option value="/opennews/index.shtml?full_lines=00&lines=40&mid_lines=00">40 заголовков
+    </select>
+</form>
+</td></tr>
+<tr><td>&nbsp;<small><A HREF="https://wiki.opennet.ru/RSS">Каналы:</A></small>&nbsp;<a href="https://wiki.opennet.ru/RSS"><img src="/xml.gif" height="14" width="36" alt="XML" border="0"></img></a>&nbsp;<a href="https://twitter.com/opennetru"><img src="/twitter.png" height="16" width="16" alt="twitter" title="Twitter" border="0"></a>&nbsp;<a href="https://www.facebook.com/OpenNet.News/"><img src="/img/facebook.gif" height="16" width="16" title="Facebook" border="0"></a>&nbsp;<a href="https://vk.com/opennet"><img src="/img/vkontakte.gif" height="16" width="16" title="ВКонтакте" border="0"></a>&nbsp;<a href="https://telegram.space/opennet_ru"><img src="/img/telegram2.png" height="16" width="16" title="Telegram" border="0"></a>&nbsp;<a href="https://zen.yandex.ru/opennet"><img src="/img/zen.png" height="16" width="16" title="Yandex Zen" border="0"></a></td></tr>
+<tr><td>&nbsp;<small><A HREF="/opennews/chapters.shtml">Разделы новостей</A> | <A HREF="/news/grab_mix.shtml">Сводные</A></small></td></tr>
+<tr><td>&nbsp;<small><A HREF="/news/opennet.shtml">Что нового на OpenNet</A></small></td></tr>
+<tr><td>&nbsp;<small><A HREF="/search_adv.shtml#news">Поиск в новостях</A></small></td></tr>
+<tr><td>&nbsp;<small><A HREF="/cgi-bin/openforum/vsluhboard.cgi?az=list&forum=vsluhforumID3&open=new">Новые комментарии</A></small></td></tr>
+<tr><td>&nbsp;<small><A HREF="https://www.opennet.ru/announce_news.shtml?cache=off">Добавить свою новость</A></small></td></tr>
+</table>
+
+	<!-- быстрый переход. конец -->
+<br>
+<table class=thdr>
+<tr><td><A HREF="https://www.opennet.ru/#imp">Важное</a></td></tr>
+</table>
+
+<table class=tlist>
+<tr><td><b>-</b> 26.12&nbsp;<a href="/opennews/art.shtml?num=64505">Линус Торвальдс раскритиковал связанное с GPL разбирательство между SFС и Vizio</a> <span class=cnt>(79 +14)</span></td></tr>
+<tr><td><b>-</b> 16.12&nbsp;<a href="/opennews/art.shtml?num=64432">Отчёт Cloudflare о состоянии интернета в 2025 году</a> <span class=cnt>(122 +31)</span></td></tr>
+<tr><td><b>-</b> 11.12&nbsp;<a href="/opennews/art.shtml?num=64410">Первый стабильный релиз среды рабочего стола COSMIC</a> <span class=cnt>(90 +49)</span></td></tr>
+<tr><td><b>-</b> 04.12&nbsp;<a href="/opennews/art.shtml?num=64373">Уязвимость в серверных компонентах React, позволяющая выполнить код на сервере</a> <span class=cnt>(68 +14) <span title="дополнено 05.12.2025" style="font-size: 10pt; font-weight: bold;">&#8635;</span></span></td></tr>
+<tr><td><b>-</b> 02.12&nbsp;<a href="/opennews/art.shtml?num=64363">Let's Encrypt уменьшит срок действия сертификатов до 45 дней</a> <span class=cnt>(212 &ndash;22)</span></td></tr>
+<tr><td><b>-</b> 01.12&nbsp;<a href="/opennews/art.shtml?num=64346">Релиз ядра Linux 6.18</a> <span class=cnt>(226 +41)</span></td></tr>
+<tr><td><b>-</b> 27.11&nbsp;<a href="/opennews/art.shtml?num=64333">Представлен открытый офисный пакет Collabora Office</a> <span class=cnt>(116 +28)</span></td></tr>
+<tr><td><b>-</b> 26.11&nbsp;<a href="/opennews/art.shtml?num=64328">В KDE Plasma 6.8 решено прекратить поддержку X11</a> <span class=cnt>(378 &ndash;21)</span></td></tr>
+
+
+<tr><td><b>-</b> &nbsp;<a href="/opennews/art.shtml?num=62475">Сводка событий за 2024 год</a></td></tr>
+
+</table>
+
+<br>
+<table class=thdr>
+<tr><td><a href="/tips/sml/">Советы</a></td></tr>
+</table>
+
+<table class=tlist>
+<tr><td><b>-</b> 25.12.2025 <A HREF="/tips/3290_ostree_linux.shtml">Атомарные обновления в OSTree</A></td></tr>
+<tr><td><b>-</b> 03.11.2025 <A HREF="/tips/3287_bot_block_cookie_javascript_caddy_nginx.shtml">Отсеивание AI-ботов на web-сервере через Cookie</A></td></tr>
+<tr><td><b>-</b> 01.11.2025 <A HREF="/tips/3284_freebsd_linux_container_podman.shtml">Запуск Linux-контейнеров во FreeBSD</A></td></tr>
+<tr><td><b>-</b> 26.10.2025 <A HREF="/tips/3280_rpm_ostree_oracel_rhel_linux_boot.shtml">Создание загрузочного атомарно обновляемого образа Oracle Linux при помощи OSTree</A></td></tr>
+<tr><td><b>-</b> 19.09.2025 <A HREF="/tips/3278_debian_deb_dpkg_vim_neovim.shtml">Сборка deb-пакета для решения проблем с плагином nvim-cmp для neovim в Debian 13</A></td></tr>
+
+</table>
+
+<br>
+<table class=thdr>
+<tr><td><A HREF="https://www.opennet.ru/cgi-bin/openforum/vsluhboard.cgi?az=list&forum=vsluhforumID3">Обсуждаемые новости</A></td></tr>
+</table>
+
+<table class=tlist>
+<tr><td><b>-</b> 21:39 <a href="/openforum/vsluhforumID3/138795.html">Линус Торвальдс раскритиковал связанное с GPL разбирательство между SFС и Vizio</a>&nbsp;(83)</td></tr>
+<tr><td><b>-</b> 21:37 <a href="/openforum/vsluhforumID3/138801.html">Проект Phoenix развивает современный X-сервер, написанный на языке Zig </a>&nbsp;(122)</td></tr>
+<tr><td><b>-</b> 21:29 <a href="/openforum/vsluhforumID3/138790.html">Релиз картографического приложения CoMaps 2025.12.19 и отчёт о состоянии проекта</a>&nbsp;(43)</td></tr>
+<tr><td><b>-</b> 21:29 <a href="/openforum/vsluhforumID3/138787.html">Опубликован язык программирования Ruby 4.0</a>&nbsp;(123)</td></tr>
+<tr><td><b>-</b> 21:03 <a href="/openforum/vsluhforumID3/138667.html">Уязвимость в Binder, подсистеме ядра Linux, написанной на Rust</a>&nbsp;(286)</td></tr>
+<tr><td><b>-</b> 20:53 <a href="/openforum/vsluhforumID3/138793.html">Arch Linux временно оставил доступ к сайту только через IPv6 из-за DDoS-атаки</a>&nbsp;(79)</td></tr>
+<tr><td><b>-</b> 20:46 <a href="/openforum/vsluhforumID3/138522.html">Выпуск композитного сервера Niri 25.11, использующего Wayland</a>&nbsp;(35)</td></tr>
+<tr><td><b>-</b> 20:12 <a href="/openforum/vsluhforumID3/138660.html">Назначен новый руководитель Mozilla Corporation, делающий ставку на AI в Firefox</a>&nbsp;(201)</td></tr>
+
+</table>
+<br>
+
+<table class=thdr>
+<tr><td><a href="/lastsoft/"><u>Новые версии</u></a></td></tr>
+</table>
+<table class=ttxt>
+<tr><td class=tmenu>
+Программы:<br>
+&nbsp;	26.12&nbsp;<a href="https://gitlab.com/inkscape/inkscape/-/tags" style="">Inkscape 1.4.3</a><br>
+&nbsp;	25.12&nbsp;<a href="https://github.com/GStreamer/gstreamer/tags" style="">gstreamer 1.26.10</a><br>
+&nbsp;	24.12&nbsp;<a href="https://www.opennet.ru/opennews/art.shtml?num=64495" style="font-weight: 600;">Angie 1.11.0</a><br>
+&nbsp;	24.12&nbsp;<a href="https://www.opennet.ru/opennews/art.shtml?num=64494" style="font-weight: 600;">Ruby 4.0.0</a><br>
+&nbsp;	23.12&nbsp;<a href="https://github.com/linuxmint/cinnamon/tags" style="">Cinnamon 6.6.3</a><br>
+&nbsp;	23.12&nbsp;<a href="https://www.opennet.ru/opennews/art.shtml?num=64500" style="font-weight: 600;">QEMU 10.2.0</a><br>
+&nbsp;	23.12&nbsp;<a href="https://github.com/mongodb/mongo/tags" style="">mongoDB 8.2.3</a><br>
+&nbsp;	22.12&nbsp;<a href="https://github.com/MariaDB/server/tags" style="">mariadb 12.3</a><br>
+&nbsp;	22.12&nbsp;<a href="https://www.opennet.ru/opennews/art.shtml?num=64476" style="font-weight: 600;">Lua 5.5</a><br>
+&nbsp;	21.12&nbsp;<a href="https://www.opennet.ru/opennews/art.shtml?num=64473" style="font-weight: 600;">MPV 0.41</a><br>
+&nbsp;	21.12&nbsp;<a href="https://github.com/doublecmd/doublecmd/tags" style="">Double Commander 1.1.31</a><br>
+&nbsp;	21.12&nbsp;<a href="https://github.com/ventoy/Ventoy/tags" style="">ventoy 1.1.10</a><br>
+&nbsp;	21.12&nbsp;<a href="https://github.com/haproxy/haproxy/tags" style="">HAProxy 3.3.0, 3.2.10, 3.0.13, 2.8.17</a><br>
+&nbsp;	21.12&nbsp;<a href="https://github.com/Gnucash/gnucash/tags" style="">GnuCash 5.14</a><br>
+&nbsp;	20.12&nbsp;<a href="https://github.com/denoland/deno/tags" style="">Deno 2.6.3</a><br>
+&nbsp;	20.12&nbsp;<a href="https://github.com/bminor/binutils-gdb/tags" style="">GDB 17.1</a><br>
+&nbsp;	20.12&nbsp;<a href="https://github.com/xbmc/xbmc/tags" style="">Kodi 22-Alpha2</a><br>
+&nbsp;	20.12&nbsp;<a href="https://github.com/dotnet/runtime/tags" style="">.NET 10.0.1</a><br>
+&nbsp;	20.12&nbsp;<a href="https://gitlab.com/cryptsetup/cryptsetup/-/tags" style="">cryptsetup 2.8.3</a><br>
+&nbsp;	20.12&nbsp;<a href="https://github.com/labwc/labwc/releases/tags" style="">Labwc 0.9.3</a><br>
+&nbsp;	20.12&nbsp;<a href="https://github.com/lxc/incus/releases/tag/" style="">Incus 6.20</a><br>
+&nbsp;	20.12&nbsp;<a href="https://github.com/numpy/numpy/tags" style="">NumPy 2.4.0</a><br>
+&nbsp;	20.12&nbsp;<a href="https://github.com/wine-mirror/wine/tags" style="">wine 11.0-rc3</a><br>
+<br>Дистрибутивы:<br>
+&nbsp;	23.12&nbsp;<a href="https://www.opennet.ru/opennews/art.shtml?num=64482" style="font-weight: 600;">postmarketOS 25.12</a><br>
+&nbsp;	22.12&nbsp;<a href="https://www.opennet.ru/opennews/art.shtml?num=64477" style="font-weight: 600;">elementary OS 8.1</a><br>
+&nbsp;	22.12&nbsp;<a href="https://www.opennet.ru/opennews/art.shtml?num=64471" style="font-weight: 600;">Qubes 4.3.0</a><br>
+&nbsp;	19.12&nbsp;<a href="https://www.opennet.ru/opennews/art.shtml?num=64456" style="font-weight: 600;">OpenWRT 24.10.5</a><br>
+&nbsp;	18.12&nbsp;<a href="https://chromereleases.googleblog.com/" style="">Chrome OS 143</a><br>
+&nbsp;	16.12&nbsp;<a href="https://blogs.oracle.com/solaris/" style="">Solaris 11.4 SRU88</a><br>
+
+<br>Актуальные ядра Linux:<br>
+&nbsp; 18.12&nbsp;<a href="/kernel/6.18.2.html">6.18.2</a>, <a href="/kernel/6.17.13.html">6.17.13</a>, <a href="/kernel/6.12.63.html">6.12.63</a><br>
+&nbsp; 06.12&nbsp;<a href="/kernel/6.6.119.html">6.6.119</a>, <a href="/kernel/6.1.159.html">6.1.159</a>, <a href="/kernel/5.15.197.html">5.15.197</a>, <a href="/kernel/5.10.247.html">5.10.247</a><br>
+&nbsp; 03.12&nbsp;<a href="/kernel/5.4.302.html">5.4.302</a><br>
+
+<tr><td class=tmenu><a href="/kernel/ml/">Изменения в ядре 6.19</a></td></tr>
+</td></tr>
+</table>
+
+
+
+</td></tr>
+</table>
+</aside>
+</div>
+<!--/htdig_noindex-->
+<div style="clear: both;"></div>
+
+
+
+
+<!-- script type="text/javascript" src="https://apis.google.com/js/plusone.js" async></script -->
+<!--
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+-->
+	  
+<!--htdig_noindex-->
+<noindex>
+<br>
+
+
+</noindex>
+<!--/htdig_noindex-->
+
+
+<!-- footer -->
+<!--htdig_noindex-->
+<br><br>
+<div style="background-color: #E9EAD6; width:100%; height: 62px;">
+<div style="margin-right: 20px; float:left; line-height:61px; vertical-align: middle; margin-left: 10px; font-size: 120%;">
+Партнёры:
+</div>
+<div style="float:left; height:61px;  line-height:61px; margin-left: 20px;">
+<a style="align: middle;" target=_blank href="https://www.postgrespro.ru"><img src="/img/pp_200.png" height=60 width=200 alt="PostgresPro"></a>
+</div>
+<div style="float:left; height:61px;  line-height:61px; margin-left: 20px;">
+<a style="align: middle;" target=_blank href="https://ishosting.com/ru">
+<img src="/img/inferno2.png" height=60 width=200 alt="Inferno Solutions"></a>
+</div>
+<div style="float:right; height:61px;  line-height:61px;  margin-left: 15px;">
+<a style="align: middle;" target=_blank href="http://hoster.ru/?utm_source=site&utm_medium=banner&utm_campaign=opennet"><img src="/img/dh143x60t.png" height=60 width=143 alt="Hosting by Hoster.ru"></a>
+</div>
+<div style="float:right;  height:61px;  line-height: 61px; vertical-align: middle;font-size: 120%;">
+Хостинг:
+</div>
+
+</div>
+<div style="clear: both;"></div>
+
+
+<br>
+<TABLE class=ttxt style="border-top: 3px solid #C9CaB6;">
+<TD WIDTH="35%">
+<A HREF="/cgi-bin/opennet/bookmark.cgi">Закладки на сайте</A><BR>
+<A HREF="/cgi-bin/opennet/bookmark.cgi?submit=add" target="blank_">Проследить за страницей</A>
+</TD>
+<TD WIDTH="65%" ALIGN=RIGHT>
+Created&nbsp;1996-2025&nbsp;by <B><A HREF="/contact.shtml" title="email maxim.chirkov@gmail.com">Maxim&nbsp;Chirkov</A></B><BR>
+<A HREF="https://www.opennet.ru/add.shtml">Добавить</A>, <A HREF="https://www.opennet.ru/donate.shtml" style="color: #C00000;">Поддержать</A>, <A HREF="https://www.opennet.ru/banners2.shtml">Вебмастеру</A>
+</TD>
+</TR>
+</TABLE>
+<!--/htdig_noindex-->
+<!-- end of footer -->
+<!--
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-123449-1', 'auto');
+    ga('send', 'pageview');
+</script>
+-->
+
+
+</body>
+</html>
